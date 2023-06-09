@@ -19,6 +19,12 @@ import FooterStyle01 from '../../../Components/Footers/FooterStyle01';
 import Buttons from '../../../Components/Button/Buttons'
 import SideButtons from "../../../Components/SideButtons";
 
+// Assets
+import TeamImg1 from '../../../Assets/img/TeamImg1.jpg'
+import TeamImg2 from '../../../Assets/img/TeamImg2.jpg'
+import EraLogo from '../../../Assets/img/era-logo-transparent.png'
+
+
 // Data
 import { InteractiveBannersData05 } from '../../../Components/InteractiveBanners/InteractiveBannersData';
 
@@ -305,7 +311,7 @@ const OurTeamPage = (props) => {
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={EraLogo} data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
                 <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
                 <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
               </Navbar.Brand>
@@ -337,34 +343,19 @@ const OurTeamPage = (props) => {
           <Row>
             <Col className="text-center mb-28 z-0 lg:mb-12 md:mb-20">
               <TiltBox>
-                <div className="mb-[20px] block"><span className="font-serif font-medium text-white uppercase tracking-[1px] text-sm bg-darkgray inline-block px-[20px] py-[5px]">We are litho highly creative team</span></div>
+                <div className="mb-[20px] block"><span className="font-serif font-medium text-white uppercase tracking-[1px] text-sm bg-darkgray inline-block px-[20px] py-[5px]">We are Era Solutions. A highly creative team</span></div>
                 <span className="font-serif title cover-background font-bold text-center text-[230px] leading-[230px] -tracking-[5px] uppercase bg-darkgray lg:text-[170px] lg:leading-[170px] md:text-[130px] md:leading-[130px] sm:text-[100px] sm:leading-[100px] xs:text-[55px] xs:leading-[55px] xs:-tracking-[1px]"
-                  style={{ backgroundImage: `url(https://via.placeholder.com/1920x1091)` }}>Together
+                  style={{ backgroundImage: `url(${TeamImg2})` }}>Together
                 </span>
               </TiltBox>
             </Col>
-            <ScrollTo to="downsection" offset={0} delay={0} spy={true} smooth={true} duration={800} className="absolute justify-center bottom-[50px] left-1/2 w-[45px] px-0 flex h-[45px] -translate-x-1/2 sm:bottom-7 box-shadow-small rounded-full cursor-pointer">
+            <ScrollTo to="position-open" offset={0} delay={0} spy={true} smooth={true} duration={800} className="absolute justify-center bottom-[50px] left-1/2 w-[45px] px-0 flex h-[45px] -translate-x-1/2 sm:bottom-7 box-shadow-small rounded-full cursor-pointer">
               <i className="feather-arrow-down text-lg leading-[1] text-[#e05fc4] bg-white xs:p-[10px] rounded-full flex justify-center items-center"></i>
             </ScrollTo>
           </Row>
         </Container>
       </m.section>
       {/* Section End */}
-
-      {/* Section Start */}
-      <section id="downsection" className="our-team-page-team py-[130px] lg:pt-[100px] lg:pb-[95px] md:pt-[70px] md:pb-[40px] sm:py-[50px] xs:pb-[25px] switch-tabs">
-        <Container fluid className="px-[7%] lg:px-[3%]">
-          <Team
-            themeColor="light"
-            overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
-            theme='team-style-04'
-            data={TeamData}
-            grid="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 justify-center"
-            carousel={false}
-            carouselOption={{ slidesPerView: 3, spaceBetween: 30, loop: true, navigation: true, autoplay: { delay: 3000, disableOnInteraction: true }, pagination: { dynamicBullets: true, clickable: true } }} />
-        </Container>
-      </section>
-      {/* Section Start */}
 
       {/* Section start */}
       <section className="pt-0 px-[7%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0">
@@ -379,7 +370,7 @@ const OurTeamPage = (props) => {
                 </ScrollTo>
               </m.div>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 6, order: 1, offset: 0 }}>
-                <m.img loading="lazy" src='https://via.placeholder.com/406x506' width="406" height="506" alt="Our Team" className="mx-auto" {...fadeIn} />
+                <m.img loading="lazy" src={TeamImg1} width="406" height="506" alt="Team photo placeholder" className="mx-auto" {...fadeIn} />
               </Col>
             </Row>
           </Container>
@@ -520,6 +511,20 @@ const OurTeamPage = (props) => {
         </Container>
       </section>
       {/* Section end */}
+
+      {/* Section Start */}
+      <section id="downsection" className="our-team-page-team py-[130px] lg:pt-[100px] lg:pb-[95px] md:pt-[70px] md:pb-[40px] sm:py-[50px] xs:pb-[25px] switch-tabs">
+        <Container fluid className="px-[7%] lg:px-[3%]">
+          <Team
+            themeColor="light"
+            overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
+            theme='team-style-04'
+            data={TeamData}
+            grid="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 justify-center"
+            carousel={false}
+            carouselOption={{ slidesPerView: 3, spaceBetween: 30, loop: true, navigation: true, autoplay: { delay: 3000, disableOnInteraction: true }, pagination: { dynamicBullets: true, clickable: true } }} />
+        </Container>
+      </section>
 
       {/* Footer Start */}
       {/*<FooterStyle01 theme="dark" className="bg-[#262b35] text-slateblue" />*/}
