@@ -23,12 +23,13 @@ import { IconWithTextData_06 } from "../../../Components/IconWithText/IconWithTe
 import { blogData } from "../../../Components/Blogs/BlogData";
 
 // Import Images
-import ERALogo from "../../../Assets/img/eralogo.png"
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 import ITimg2 from "../../../Assets/img/ITimg2.jpg"
 import ITimg4 from "../../../Assets/img/ITimg4.jpg"
 import ITimg7 from "../../../Assets/img/ITimg7.jpg"
 import ITimg8 from "../../../Assets/img/ITimg8.jpg"
 import ITimg9 from "../../../Assets/img/ITimg9.jpg"
+import TeamHeroImg from "../../../Assets/img/TeamImg2.jpg"
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({ default: module.HamburgerMenu })))
@@ -159,10 +160,9 @@ const HomeStartupPage = (props) => {
           <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                {/*<img className="default-logo" width="111" height="36" src={ERALogo} alt="ERA Solutions" />*/}
-                <img className="default-logo" width="111" height="36" src='/assets/img/webp/logo-white.webp' data-rjs='/assets/img/webp/logo-white@2x.webp' alt='logo' />
-                <img className="alt-logo" width="111" height="36" src='/assets/img/webp/logo-green-dark.webp' data-rjs='/assets/img/webp/logo-green-dark@2x.webp' alt='logo' />
-                <img className="mobile-logo" width="111" height="36" src='/assets/img/webp/logo-green-dark.webp' data-rjs='/assets/img/webp/logo-green-dark@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" src={ERALogo} alt='logo' />
+                <img className="alt-logo" width="111" height="36" src={ERALogo} alt='logo' />
+                <img className="mobile-logo" width="111" height="36" src={ERALogo} alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
@@ -176,8 +176,8 @@ const HomeStartupPage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-            <SearchBar />
-            <div className="md:hidden pl-[17px]">
+            {/* <SearchBar /> */}
+            {/* <div className="md:hidden pl-[17px]">
               <HamburgerMenu className="" theme="dark">
                 <Col className="flex flex-col justify-center px-[50px] py-[70px] w-[500px] h-[100vh] shadow-[0_0_20px_rgba(0,0,0,0.3)] right-0 text-center bg-white">
                   <ReactCustomScrollbar className="pl-[15px]" theme="dark">
@@ -214,7 +214,7 @@ const HomeStartupPage = (props) => {
                   </ReactCustomScrollbar>
                 </Col>
               </HamburgerMenu>
-            </div>
+            </div> */}
           </Col>
         </HeaderNav>
       </Header>
