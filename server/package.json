@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "mail.js",
-  "homepage": "https://www.yourdomain.com/api/",
+  "homepage": "https://localhost:4000/api/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "nodemon mail.js"
@@ -16,6 +16,11 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "nodemailer": "^6.9.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "helmet": "^7.0.0",
+    "knex": "^2.4.2",
+    "body-parser": "^1.20.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1"
   }
 }
