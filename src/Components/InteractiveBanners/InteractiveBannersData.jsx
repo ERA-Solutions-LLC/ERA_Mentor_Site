@@ -144,7 +144,7 @@ const InteractiveBannersData05 = [
         subtitle: "2 position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
-        btnLink: "/page/contact-simple",
+        btnLink: "/contact",
         icon: "ti-user"
     },
     {
@@ -152,7 +152,7 @@ const InteractiveBannersData05 = [
         subtitle: "3 position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
-        btnLink: "/page/contact-simple",
+        btnLink: "/contact",
         icon: "ti-user"
     },
     {
@@ -160,7 +160,7 @@ const InteractiveBannersData05 = [
         subtitle: "4 position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
-        btnLink: "/page/contact-simple",
+        btnLink: "/contact",
         icon: "ti-user"
     }
 ]

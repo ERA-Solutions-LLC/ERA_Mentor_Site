@@ -359,7 +359,7 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  <Route path="/" element={<LandingPage />} />
+                  <Route path="/" element={<ERAHome />} />
 
                   {/* Headers */}
                   <Route path="headers">
