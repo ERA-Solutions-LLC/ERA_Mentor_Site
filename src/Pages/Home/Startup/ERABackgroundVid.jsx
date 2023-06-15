@@ -20,7 +20,7 @@ const ERABackgroundVid = () => {
         <Row className="items-end justify-center h-full">
           <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">
             <span className="mb-[5px] font-serif text-white opacity-60 block">HR Solutions and Training</span>
-            <h1 className="text-white font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[20px]">ERA Solutions</h1>
+            <h1 className="text-white font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[20px]">Era Solutions</h1>
             <span className="h-[80px] inline-block bg-white mb-20 sm:mb-12 sm:h-[50px]"></span>
           </Col>
         </Row>

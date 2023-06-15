@@ -2,20 +2,16 @@ import React from 'react'
 
 // Libraries
 import { Link } from 'react-router-dom'
-import { Autoplay, EffectFade, Keyboard } from "swiper";
 import { Col, Container, Navbar, Row } from 'react-bootstrap'
-import { Swiper, SwiperSlide } from "swiper/react";
 import { m } from "framer-motion"
 import { Link as ScrollTo } from "react-scroll"
 
 // Components
 import { TiltBox } from '../../../Components/FancyText/FancyText'
 import { Header, HeaderCart, HeaderLanguage, HeaderNav, Menu, SearchBar } from "../../../Components/Header/Header";
-import CustomModal from '../../../Components/CustomModal'
 import { fadeIn } from '../../../Functions/GlobalAnimations';
 import Team from '../../../Components/Team/Team';
 import InteractiveBanners05 from '../../../Components/InteractiveBanners/InteractiveBanners05';
-import FooterStyle01 from '../../../Components/Footers/FooterStyle01';
 import Buttons from '../../../Components/Button/Buttons'
 import SideButtons from "../../../Components/SideButtons";
 
@@ -345,7 +341,7 @@ const OurTeamPage = (props) => {
               <TiltBox>
                 <div className="mb-[20px] block"><span className="font-serif font-medium text-white uppercase tracking-[1px] text-sm bg-darkgray inline-block px-[20px] py-[5px]">We are Era Solutions. A highly creative team</span></div>
                 <span className="font-serif title cover-background font-bold text-center text-[230px] leading-[230px] -tracking-[5px] uppercase bg-darkgray lg:text-[170px] lg:leading-[170px] md:text-[130px] md:leading-[130px] sm:text-[100px] sm:leading-[100px] xs:text-[55px] xs:leading-[55px] xs:-tracking-[1px]"
-                  style={{ backgroundImage: `url(${TeamImg2})` }}>Together
+                   >Together
                 </span>
               </TiltBox>
             </Col>
@@ -363,14 +359,15 @@ const OurTeamPage = (props) => {
           <Container>
             <Row className="justify-center items-center">
               <m.div className="font-medium text-darkgray font-serif pb-[100px] lg:pb-[70px] ml-[97px] lg:ml-[0px] md:text-center col-xl-5 col-lg-6 col-md-7 order-lg-2" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
-                <span className="mb-[35px] text-lg inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Awesomeness and creative people</span>
-                <h4 className="-tracking-[.5px] mb-[45px] xs:w-[99%]">Teamwork is the ability work together toward a <span className="font-semibold">common vision</span></h4>
+                <span className="mb-[35px] text-lg inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Looking to elevate your career? Join Era Solutions.</span>
+                <h4 className="-tracking-[.5px] mb-[45px] xs:w-[99%]">Discover our current job openings, connect with our dedicated team, and <span className="font-semibold">embark on a transformative journey with us.</span></h4>
                 <ScrollTo to="position-open" offset={0} delay={0} spy={true} smooth={true} duration={800}>
-                  <Buttons type="submit" ariaLabel="button" className="font-medium font-serif uppercase hover:text-white btn-expand" size="lg" color="#fff" themeColor="#232323" title="Join the people" />
+                  <Buttons type="submit"
+                   ariaLabel="button" className="font-medium font-serif uppercase hover:text-white btn-expand" size="lg" color="#fff" themeColor="#232323" title="Open Jobs" style={{ borderRadius: '5%'}}  />
                 </ScrollTo>
               </m.div>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 6, order: 1, offset: 0 }}>
-                <m.img loading="lazy" src={TeamImg1} width="406" height="506" alt="Team photo placeholder" className="mx-auto" {...fadeIn} />
+                <m.img loading="lazy" src={TeamImg1} width="80%" height="80%" alt="Team photo placeholder"  className="mx-auto" {...fadeIn} style={{ borderRadius: '5%', margin: '4%'}} />
               </Col>
             </Row>
           </Container>
@@ -480,7 +477,7 @@ const OurTeamPage = (props) => {
               SwiperImgData.map((item, i) => {
                 return (
                   <SwiperSlide key={i} className="h-full">
-                    <img loading="lazy" alt='contac-us' src={item.img} className="cover-background my-0 mx-auto w-full h-full object-cover" />
+                    <img loading="lazy" alt='contact-us' src={item.img} className="cover-background my-0 mx-auto w-full h-full object-cover" />
                   </SwiperSlide>)
               })
             }
@@ -512,7 +509,7 @@ const OurTeamPage = (props) => {
       </section>
       {/* Section end */}
 
-      {/* Section Start */}
+      {/* Section Start
       <section id="downsection" className="our-team-page-team py-[130px] lg:pt-[100px] lg:pb-[95px] md:pt-[70px] md:pb-[40px] sm:py-[50px] xs:pb-[25px] switch-tabs">
         <Container fluid className="px-[7%] lg:px-[3%]">
           <Team
@@ -524,7 +521,7 @@ const OurTeamPage = (props) => {
             carousel={false}
             carouselOption={{ slidesPerView: 3, spaceBetween: 30, loop: true, navigation: true, autoplay: { delay: 3000, disableOnInteraction: true }, pagination: { dynamicBullets: true, clickable: true } }} />
         </Container>
-      </section>
+      </section> */}
 
       {/* Footer Start */}
       {/*<FooterStyle01 theme="dark" className="bg-[#262b35] text-slateblue" />*/}

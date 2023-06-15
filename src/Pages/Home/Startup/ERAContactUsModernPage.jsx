@@ -167,16 +167,16 @@ const ContactUsModernPage = (props) => {
               <Row className="justify-center">
                 <Col>
                   <Formik
-                    initialValues={{ name: '', email: '', phone: '', comment: '', recaptcha: '' }}
+                    initialValues={{ name: '', email: '', phone: '', comment: '' }}
                     validationSchema={ContactFormStyle02Schema}
                     onSubmit={async (values, actions) => {
                       actions.setSubmitting(true)
-                      if (values.recaptcha !== '') {
+                      //if (values.recaptcha !== '') {
                         const response = await sendEmail(values)
                         response.status === "success" && resetForm(actions, recaptcha);
-                      } else {
-                        recaptcha.current.captcha.classList.add("error")
-                      }
+                      //} //else {
+                       // recaptcha.current.captcha.classList.add("error")
+                    //  }
                     }}
                   >
                     {({ isSubmitting, status, setFieldValue }) => (
