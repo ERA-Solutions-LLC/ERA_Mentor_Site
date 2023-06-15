@@ -29,6 +29,10 @@ import ITimg6 from "../../../Assets/img/ITimg6.jpg"
 import { TextBoxData02 } from '../../../Components/TextBox/TextBoxData';
 import { TestimonialsData01 } from '../../../Components/Testimonials/TestimonialsData';
 
+//Imports
+
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 
 const IconWithTextData_01 = [
@@ -117,13 +121,11 @@ const WhoWeArePage = (props) => {
     <div className="who-we-are" style={props.style}>
       {/* Header Start */}
       <Header topSpace={{ md: true }} type="reverse-scroll">
-        <HeaderNav fluid="fluid" theme="dark" expand="lg" className="px-[35px] py-[0px] md:px-0" containerClass="sm:px-0">
+        <HeaderNav theme="light" expand="lg" className="py-[0px] border-b !border-b-[#0000001a] lg:px-[15px] md:px-0" containerClass="sm:px-0">
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-white.webp' data-rjs='/assets/img/webp/logo-white@2x.webp' alt='logo' />
-                <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
@@ -139,9 +141,9 @@ const WhoWeArePage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col className="col-auto text-right pe-0">
-            <SearchBar className="pr-0" />
-            {/*<HeaderLanguage />
-            <HeaderCart />*/}
+            <SearchBar className="pr-0 xs:pl-[15px]" />
+            {/*<HeaderLanguage className="xs:pl-[15px]" />
+            <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />*/}
           </Col>
         </HeaderNav>
       </Header>
@@ -154,14 +156,13 @@ const WhoWeArePage = (props) => {
           src="video path"
           loop={true}
           poster={ITImg}
-          //overlay={["#0039e3", "#4132e0", "#4132e0", "#741bd9", "#8600d4"]}
           opacity={0.5}>
-          <Container className="h-full">
+          <Container className="bg-cover h-full">
             <Row className="items-end justify-center h-full">
               <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">
                 <span className="mb-[5px] font-serif text-white opacity-60 block xs:mb-[15px]">Helping Veterans and Businesses at the same time</span>
                 <h1 className="text-white font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[30px] xs:leading-[40px]">About ERA Solutions </h1>
-                <span className=" h-[80px] inline-block bg-white mb-20 sm:mb-12 sm:h-[50px]"></span>
+                <span className="h-[80px] inline-block bg-white mb-20 sm:mb-12 sm:h-[50px]"></span>
               </Col>
             </Row>
           </Container>
@@ -204,7 +205,7 @@ const WhoWeArePage = (props) => {
               </Row>
             </Col>
             <Col lg={6} xl={{ offset: 1 }} className="align-self-end text-center text-xl-start">
-              <img className="md:mx-auto" loading="lazy" src={ITimg6} width="504" height="666" alt="who-we-are" />
+              <img className="md:mx-auto" loading="lazy" src={ITimg6} width="504" height="666" style={{ borderRadius: '8%'}} alt="who-we-are" />
             </Col>
           </Row>
         </Container>
@@ -280,7 +281,7 @@ const WhoWeArePage = (props) => {
         <Container fluid>
           <Row className="justify-center">
             <Col>
-              <img loading="lazy" className="mx-auto" src={ITImg3} alt="who-we-are" width="1490" height="550" />
+              <img loading="lazy" className="mx-auto" src={ITImg3} style={{ borderRadius: '8%'}} alt="who-we-are" width="1490" height="550" />
             </Col>
           </Row>
         </Container>
@@ -292,13 +293,13 @@ const WhoWeArePage = (props) => {
         <Container className="xs:px-0">
           <m.div className="row justify-center sm:mx-0"  {...fadeIn}>
             <Overlap value={50}>
-              <Col lg={12} className="shadow-[0_0_20px_rgba(0,0,0,0.08)] bg-white items-center justify-center p-24 md:p-12 mx-auto">
+              <Col style={{ borderRadius: '5%', marginBottom: '2%'}} lg={12} className="shadow-[0_0_20px_rgba(0,0,0,0.08)] bg-darkgray items-center justify-center p-24 md:p-12 mx-auto">
                 <Row className="items-center justify-center lg:mx-0 xs:px-0 xs:text-center">
                   <Col xl={7} lg={5} md={6} className="md:mb-[50px] sm:mx-[40px] flex justify-center xs:my-[40px]">
                     <div className="inline-block text-center w-[300px] py-14 px-[15px] relative">
                       <div className="border-r-0 border-solid	border-[10px] border-basecolor h-full w-[67px] block absolute bottom-0 left-0"></div>
-                      <h1 className="text-[80px] leading-[72px] mb-0 mr-[15px] font-semibold tracking-[-5px] text-darkgray font-serif inline-block align-middle xs:!my-[30px]">20</h1>
-                      <div className="w-[40%] leading-[20px] font-medium text-darkgray text-xmd font-serif text-left relative inline-block align-middle sm:w-[35%]">
+                      <h1 className="text-[80px] leading-[72px] mb-0 mr-[15px] font-semibold tracking-[-5px] text-white font-serif inline-block align-middle xs:!my-[30px]">20</h1>
+                      <div className="w-[40%] leading-[20px] font-medium text-white text-xmd font-serif text-left relative inline-block align-middle sm:w-[35%]">
                         Years experience working
                       </div>
                       <div className="border-l-0 border-solid	border-[10px] border-basecolor h-full w-[67px] block absolute bottom-0 right-0"></div>
@@ -306,10 +307,10 @@ const WhoWeArePage = (props) => {
                   </Col>
                   <Col xl={5} md={6} sm={11} className="sm:mx-[20px] xs:mx-0 xs:px-0">
                     <span className="font-serif block mb-[15px]"></span>
-                    <h5 className="font-serif text-darkgray font-medium mb-[30px] sm:mb-[20px]">
+                    <h5 className="font-serif text-white font-medium mb-[30px] sm:mb-[20px]">
                       <span className="font-semibold">Become a partner</span> of ERA Solutions</h5>
                     <p className="mb-[40px] sm:mb-[30px]">We are always looking for new businesses to partner with.</p>
-                    <Buttons to="/contact" className="btn-fill font-medium font-serif rounded-none uppercase md:mb-[15px]" themeColor="#232323" color="#fff" size="sm" title="Become a partner" />
+                    <Buttons to="/contact" className="btn-fill font-medium font-serif rounded-none uppercase md:mb-[15px]" themeColor="#F5F5F5" color="#000" size="sm" title="Become a partner" />
                   </Col>
                 </Row>
               </Col>

@@ -28,6 +28,9 @@ import { resetForm, sendEmail } from '../../../Functions/Utilities';
 import ITImg3 from "../../../Assets/img/ITimg3.jpg"
 import ITImg4 from "../../../Assets/img/ITimg4.jpg"
 
+//imports
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+
 // Data
 import { FilterData } from '../../../Components/Portfolio/PortfolioData';
 const iconData = [
@@ -107,21 +110,18 @@ const IconWithTextData = [
 
 const ProgressBarData = [
   {
-    title: "Hands On Coding",
-    value: "100",
+    title: "Kinesthetic",
+    value: "60",
   },
   {
-    title: "Lecture/Video",
-    value: "100",
+    title: "Visual",
+    value: "20",
   },
   {
-    title: "Mentor Meetings",
-    value: "100",
+    title: "Audio",
+    value: "20",
   },
-  {
-    title: "Group Work",
-    value: "100",
-  },
+
 ]
 
 const TabData = [
@@ -320,13 +320,13 @@ const AboutMePage = (props) => {
     <div style={props.style}>
       {/* Header Start */}
       <Header topSpace={{ md: true }} type="reverse-scroll">
-        <HeaderNav fluid="fluid" theme="dark" expand="lg" className="px-[35px] py-[0px] md:px-0">
+      <HeaderNav theme="light" expand="lg" menu="light" className="py-[0px] lg:px-[15px] md:px-0" containerClass="sm:px-0">
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0 xs:px-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
@@ -352,17 +352,16 @@ const AboutMePage = (props) => {
       <SideButtons />
       {/* Section Start */}
       <section className="p-0 bg-cover bg-center relative" style={{ backgroundImage: "url(" + ITImg4 + ")" }}>
-        <Container className="relative h-[800px] md:h-[600px] sm:h-[400px]">
-          <Row className="items-center h-full md:pb-40 sm:pb-0">
-            <Col lg={{ span: 6, offset: 6 }} sm={{ span: 7, offset: 5 }}>
-              <h2 className="font-serif text-white -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center">We <span className="text-decoration-line-bottom-thick">Offer training</span></h2>
-              <p className="w-3/4 md:w-full xs:w-4/5 font-serif text-white leading-[30px] opacity-70 font-light text-xmd mb-10 block xs:mx-auto xs:text-center">From software certifications to broadband certifications, We have you covered.</p>
-              {/*<div className="text-left xs:text-center">
-                <SocialIcons size="sm" theme="social-icon-style-01" className="justify-start xs:justify-center" iconColor="light" data={iconData} />
-              </div>*/}
-            </Col>
-          </Row>
-        </Container>
+      <Container className="relative h-[800px] md:h-[600px] sm:h-[400px]">
+      <Row className="items-center h-full md:pb-40 sm:pb-0">
+        <Col className="d-flex justify-content-center align-items-center">
+          <div className="text-center">
+            <h2 className="font-serif text-white -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center">We Offer Training</h2>
+            <p className="font-serif text-white leading-[30px] opacity-80 font-light text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 18}}>From software certifications to broadband certifications, We have you covered.</p>
+          </div>
+        </Col>
+      </Row>
+    </Container>
       </section>
       {/* Section End */}
 
@@ -393,7 +392,7 @@ const AboutMePage = (props) => {
                 About our Training Programs
               </span>
               <h5 className="text-darkgray font-medium font-serif block mb-[25px]">Get ahead and plan for your future</h5>
-              <p>Technology continues to advance at an exponential rate, but alongside this growth arises a great need for experienced talent to fill many new jobs. With the advent of the COVID-19 pandemic which led to shortages and shutdowns across numerous industries, an increased need has arisen for innovation and emerging technologies in order to be competitive in the ever-changing market space. Learn about some of the programs ERA Solutions offers to gain the necessary skills for careers in the IT industry!</p>
+              <p>Technology continues to advance at an exponential rate, but alongside this growth arises a great need for experienced talent to fill many new jobs. With the advent of the COVID-19 pandemic which led to shortages and shutdowns across numerous industries, an increased need has arisen for innovation and emerging technologies in order to be competitive in the ever-changing market space. Learn about some of the programs Era Solutions offers to gain the necessary skills for careers in the IT industry!</p>
             </Col>
             <Col lg={{ span: 5, offset: 1 }} className="mb-[30px]">
               <ProgressBar
@@ -560,9 +559,9 @@ const AboutMePage = (props) => {
 
       {/* Section Start */}
       <m.section className="overflow-hidden" {...fadeIn}>
-        <Container fluid>
-          <Row >
-            <Col xl={{ span: 3, order: 1 }} lg={{ span: 5, order: 2 }} xs={{ order: 1 }} className="about-me-blockquote bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]">
+        <Container fluid >
+          <Row style={{display: 'flex', justifyContent: 'center'}}>
+            <Col xl={{ span: 3, order: 1 }} lg={{ span: 5, order: 2 }} xs={{ order: 1 }} className="about-me-blockquote bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]" style={{ borderRadius: "8% 0 0 8%", width: '28vw'}}>
               <Blockquote
                 className="h-full font-medium flex flex-col justify-center"
                 theme="blockquote-style-01"
@@ -571,8 +570,8 @@ const AboutMePage = (props) => {
                 author="- Tim O-Reilly"
               />
             </Col>
-            <Col xl={{ span: 5, order: 2 }} lg={{ span: 12, order: 1 }} xs={{ order: 2 }} className="cover-background lg:h-[500px] sm:h-[300px] bg-cover" style={{ backgroundImage: "url(" + ITImg3  + ")" }}></Col>
-            <Col xl={4} lg={7} xs={{ order: 3 }} className="bg-darkgray p-28 xl:p-12 lg:p-24">
+            {/* <Col xl={{ span: 5, order: 2 }} lg={{ span: 12, order: 1 }} xs={{ order: 2 }} className="cover-background lg:h-[500px] sm:h-[300px] bg-cover" style={{ backgroundImage: "url(" + ITImg3  + ")" }}></Col> */}
+            <Col xl={4} lg={7} xs={{ order: 3 }} className="bg-darkgray p-28 xl:p-12 lg:p-24" style={{ borderRadius: "0 7% 7% 0", width: '68vw'}}>
               <Row className="justify-center">
                 <Col className="col-md mb-8 sm:mb-12">
                   <h6 className="font-serif text-white">Our Training Agenda</h6>
