@@ -160,7 +160,7 @@ const InteractiveBannersData05 = [
         subtitle: "4 position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
-        btnLink: "/contact",
+        btnLink: "/page/contact-simple",
         icon: "ti-user"
     }
 ]
