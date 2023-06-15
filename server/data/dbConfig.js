@@ -1,7 +1,8 @@
 const knex = require('knex')
+({client:'mysql'})
 
 const config = require('../knexfile')
 
-const dbEnv = process.env.DB_ENV || 'development'
+const dbEnv =  'development'
 
 module.exports = knex(config, {dbEnv})
