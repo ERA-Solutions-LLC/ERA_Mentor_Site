@@ -288,7 +288,7 @@ const HomeStartupPage = (props) => {
                 <Row sm={2} xs={1} className="gap-y-10">
                   <Col className="xs:text-center">
                     <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Hiring</span>
-                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personel.</p>
+                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personnel.</p>
                   </Col>
                   <Col className="xs:text-center">
                     <div className="">
