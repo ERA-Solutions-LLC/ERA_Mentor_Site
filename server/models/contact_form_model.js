@@ -20,7 +20,7 @@ async function deleteContactForm(id) {
     return await knex('contact_form').where({id: id}).del()
 }
 
-modules.export = {
+module.export = {
     getAllContactForm,
     findContactFormById,
     insertContactForm,

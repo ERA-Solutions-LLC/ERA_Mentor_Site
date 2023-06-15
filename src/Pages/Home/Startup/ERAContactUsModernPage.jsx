@@ -205,7 +205,7 @@ const ContactUsModernPage = (props) => {
                             onChange={(response) => { setFieldValue("recaptcha", response) }}
                           />
                         )}
-                        <Buttons type="submit" className={`tracking-[0.5px] btn-fill rounded-none font-medium uppercase${isSubmitting ? " loading" : ""}`} themeColor="#232323" size="md" color="#fff" title="Send Message" />
+                        <Buttons onClick= {console.log('Im here')}type="submit" className={`tracking-[0.5px] btn-fill rounded-none font-medium uppercase${isSubmitting ? " loading" : ""}`} themeColor="#232323" size="md" color="#fff" title="Send Message" />
                         <AnimatePresence>
                           {status && <div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><MessageBox className="mt-[20px] py-[10px]" theme="message-box01" variant="success" message="Your message has been sent successfully!" /></div>}
                         </AnimatePresence>
