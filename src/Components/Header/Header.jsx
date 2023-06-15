@@ -137,16 +137,16 @@ export const HeaderNav = (props) => {
       }
     });
   };
-
+  
   return (
     <Navbar
       collapseOnSelect
       id="headerbar"
       expand={props.expand}
-      bg={props.bg ? props.bg : "transparent"}
+      bg={props.bg ? props.bg : "light"}
       variant={props.theme}
       className={`${props.menu && `menu-${props.menu}`}${props.className ? ` ${props.className}` : ""
-        }${props.bg || props.bg === "transparent" ? "" : " header-transparent"}`}
+        }${props.bg ? "" : "light"}`}
       onToggle={handleMenuToggle}
     >
       <Container
@@ -157,6 +157,26 @@ export const HeaderNav = (props) => {
       </Container>
     </Navbar>
   );
+  
+  // return (
+  //   <Navbar
+  //     collapseOnSelect
+  //     id="headerbar"
+  //     expand={props.expand}
+  //     bg={props.bg ? props.bg : "#fff"}
+  //     variant={props.theme}
+  //     className={`${props.menu && `menu-${props.menu}`}${props.className ? ` ${props.className}` : ""
+  //       }${props.bg || props.bg === "transparent" ? "" : " header-transparent"}`}
+  //     onToggle={handleMenuToggle}
+  //   >
+  //     <Container
+  //       fluid={props.fluid}
+  //       className={props.containerClass ? props.containerClass : ""}
+  //     >
+  //       {props.children}
+  //     </Container>
+  //   </Navbar>
+  // );
 };
 /* Headernav Component End */
 
@@ -292,17 +312,17 @@ export const Menu = memo((props) => {
                   {item.megamenu.map((item, i) => {
                     return (
                       <ul className={`${(item.dropdown.filter(item => item.img).length > 0) ? "!pr-[30px] img-wrapper inline-block last:!pr-[0px]" : "inline-block"}`} key={i}>
-                        {item.title && <li className="title text-md font-medium mb-[15px] whitespace-nowrap">
+                        {item.title && <li className="title md:text-black text-md font-medium mb-[15px] whitespace-nowrap">
                           {item.title}
                         </li>}
                         {item.dropdown &&
                           item.dropdown.map((item, i) => {
                             return (
                               <li className="nav-item" key={i}>
-                                {item.title && <Link className="nav-link" to={item.link ? item.link : "#"} > {item.icon && (<i className={`${item.icon} mr-[10px]`} ></i>)}{" "}
+                                {item.title && <Link className="nav-link" to={item.link ? item.link : "#"} > {item.icon && (<i className={`${item.icon} md:text-black mr-[10px]`} ></i>)}{" "}
                                   {item.title}
                                 </Link>}
-                                {(item.img && item.link) && <Link to={item.link}><img height="235" alt="menu-banner" width="210" className="inline-block max-w-[210px]" src={item.img} /></Link>}
+                                {(item.img && item.link) && <Link to={item.link}><img height="235" alt="menu-banner" width="210" className="inline-block max-w-[210px] md:text-black" src={item.img} /></Link>}
                               </li>
                             );
                           })}

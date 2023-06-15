@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { json } = require('body-parse')
+const { json } = require('body-parser')
 
 const Employee_details = require('../../models/employee_details')
 

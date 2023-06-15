@@ -1,15 +1,11 @@
 const express = require("express");
+const router = express.Router()
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const PORT = 4000;
 require("dotenv").config();
-console.log(process.env);
 
-const app = express()
-app.use(express.json())
-app.use(cors())
-    /*origin: 'https://www.erasolutions.us/'
-}))*/
+
+
 
 // setup nodemailer configuration
 const transporter = nodemailer.createTransport({
@@ -30,11 +26,11 @@ transporter.verify((err, success) => {
     }
 })
 
-app.get('/api/test', (req, res) => {
+router.get('/test', (req, res) => {
     res.send('Hello world')
 })
 
-app.post("/api/send", (req, res) => {
+router.post("/send", (req, res) => {
     const { email, name, phone, comment } = req.body
 
 
@@ -42,7 +38,7 @@ app.post("/api/send", (req, res) => {
     if ( name !== undefined ) {
         var mailConfig = {
             from: process.env.REACT_APP_SMTP_EMAIL,
-            to: email,
+            to: "support@erasolutions.us",
             subject: name,
             html: `<html>
             <head>
@@ -125,6 +121,4 @@ app.post("/api/send", (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
-    console.log(`server is started at port ${PORT}`);
-})
+module.exports = router

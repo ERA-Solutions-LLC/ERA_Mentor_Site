@@ -23,13 +23,14 @@ import { IconWithTextData_06 } from "../../../Components/IconWithText/IconWithTe
 import { blogData } from "../../../Components/Blogs/BlogData";
 
 // Import Images
-import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 import ITimg2 from "../../../Assets/img/ITimg2.jpg"
 import ITimg4 from "../../../Assets/img/ITimg4.jpg"
 import ITimg7 from "../../../Assets/img/ITimg7.jpg"
 import ITimg8 from "../../../Assets/img/ITimg8.jpg"
 import ITimg9 from "../../../Assets/img/ITimg9.jpg"
-import TeamHeroImg from "../../../Assets/img/TeamImg2.jpg"
+
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({ default: module.HamburgerMenu })))
@@ -60,17 +61,17 @@ const blogMasonryData = blogData.filter((item) => item.blogType === "masonry").f
 const iconWithTextData = [
   {
     icon: "line-icon-Cursor-Click2 text-[#27ae60]",
-    title: "Business Growth through a strong workforce",
-    content: "Provide platform opportunities",
+    title: "We Empower Business To Build A Workforce That Delivers Exceptional Results",
+    content: "Providing platform opportunities",
   },
   {
     icon: "line-icon-Bakelite text-[#27ae60]",
-    title: "Bridge the Gap",
-    content: "Facilitate an evironment of interest in your products",
+    title: "Building a Strong workforce for Your Business by Offering Cost-Effective Solutions",
+    content: "Advanced technology that simplifies hiring ensures successful hires",
   },
   {
     icon: "line-icon-Boy text-[#27ae60]",
-    title: "Respect you and your business",
+    title: "We Offer Business A Range of Human Resource Solutions To Help Them Find And Hire Top Military Talent",
     content: "Committed to providing top-notch leads and employees",
   },
 ]
@@ -118,36 +119,36 @@ const SocialIconsData = [
   },
 ]
 
-const InteractiveBannersData = [
-  {
-    subtitle: "BMW",
-    title: "Bundle of layout type different layout",
-    img: "https://via.placeholder.com/915x716",
-    btnTitle: "View information",
-    btnLink: "/page/what-we-offer"
-  },
-  {
-    subtitle: "Kawasaki",
-    title: "We are delivering beautiful products",
-    img: "https://via.placeholder.com/915x716",
-    btnTitle: "View information",
-    btnLink: "/page/what-we-offer"
-  },
-  {
-    subtitle: "Triumph",
-    title: "True responsiveness modern responsive",
-    img: "https://via.placeholder.com/915x716",
-    btnTitle: "View information",
-    btnLink: "/page/what-we-offer"
-  },
-  {
-    subtitle: "Harley Davidson",
-    title: "Beautiful and modern latest page builder",
-    img: "https://via.placeholder.com/915x716",
-    btnTitle: "View information",
-    btnLink: "/page/what-we-offer"
-  },
-]
+// const InteractiveBannersData = [
+//   {
+//     subtitle: "BMW",
+//     title: "Bundle ",
+//     img: BMWLogo,
+//     btnTitle: "View information",
+//     btnLink: "/page/what-we-offer"
+//   },
+//   {
+//     subtitle: "Kawasaki",
+//     title: "We are delivering beautiful products",
+//     img: KawasakiLogo,
+//     btnTitle: "View information",
+//     btnLink: "/page/what-we-offer"
+//   },
+//   {
+//     subtitle: "Triumph",
+//     title: "True responsiveness modern responsive",
+//     img: TriumphLogo,
+//     btnTitle: "View information",
+//     btnLink: "/page/what-we-offer"
+//   },
+//   {
+//     subtitle: "Harley Davidson",
+//     title: HarleyDLogo,
+//     img: "https://via.placeholder.com/915x716",
+//     btnTitle: "View information",
+//     btnLink: "/page/what-we-offer"
+//   },
+// ]
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
@@ -155,66 +156,33 @@ const HomeStartupPage = (props) => {
   return (
     <div style={props.style}>
       {/* Header Start */}
+      {/* Header Start */}
       <Header topSpace={{ md: true }} type="reverse-scroll">
-        <HeaderNav fluid="fluid" theme="dark" expand="lg" className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
-          <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
+        <HeaderNav theme="light" expand="lg" className="py-[0px] border-b !border-b-[#fff] lg:px-[15px] md:px-0" containerClass="sm:px-0">
+          <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" src={ERALogo} alt='logo' />
-                <img className="alt-logo" width="111" height="36" src={ERALogo} alt='logo' />
-                <img className="mobile-logo" width="111" height="36" src={ERALogo} alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={ERALogo}  alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
-          <Navbar.Toggle className="order-last md:ml-[17px] w-[25px] min-h-[15px] inline-block align-middle">
-            <span className="navbar-toggler-line"></span>
-            <span className="navbar-toggler-line"></span>
-            <span className="navbar-toggler-line"></span>
-            <span className="navbar-toggler-line"></span>
-          </Navbar.Toggle>
-          <Navbar.Collapse className="justify-center col-auto col-lg-8">
+          <div className="col-auto hidden order-last md:block">
+            <Navbar.Toggle className="md:ml-[10px] sm:ml-0">
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+            </Navbar.Toggle>
+          </div>
+          <Navbar.Collapse className="col-auto px-0 justify-end">
             <Menu {...props} />
           </Navbar.Collapse>
-          <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-            {/* <SearchBar /> */}
-            {/* <div className="md:hidden pl-[17px]">
-              <HamburgerMenu className="" theme="dark">
-                <Col className="flex flex-col justify-center px-[50px] py-[70px] w-[500px] h-[100vh] shadow-[0_0_20px_rgba(0,0,0,0.3)] right-0 text-center bg-white">
-                  <ReactCustomScrollbar className="pl-[15px]" theme="dark">
-                    <div>
-                      <h1 className="mb-0 font-bold tracking-[-3px] text-darkgray font-serif uppercase">Hello</h1>
-                      <p className="text-lg text-[#27ae60] font-serif uppercase block">Let's be friends.</p>
-                      <div className="my-20 w-full">
-                        <StaticInstagram className="" />
-                      </div>
-                      <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get latest update for our trusted applications</p>
-                      <Formik
-                        initialValues={{ email: '' }}
-                        validationSchema={Yup.object().shape({ email: Yup.string().email("Invalid email.").required("Field is required."), })}
-                        onSubmit={async (values, actions) => {
-                          actions.setSubmitting(true)
-                          const response = await sendEmail(values)
-                          response.status === "success" && resetForm(actions)
-                        }}
-                      >
-                        {({ isSubmitting, status }) => (
-                          <div className="relative subscribe-style-05 mb-20">
-                            <Form className="relative">
-                              <Input showErrorMsg={false} type="email" name="email" className="border-[1px] medium-input rounded-[5px] border-solid border-[#dfdfdf]" placeholder="Enter your email address" />
-                              <button aria-label="Subscribe" type="submit" className={`text-xs leading-[18px] py-[12px] px-[28px] uppercase xs:text-center${isSubmitting ? " loading" : ""}`}><i className="far fa-envelope text-basecolor text-sm leading-none mr-[10px] xs:mr-0"></i>Subscribe</button>
-                            </Form>
-                            <AnimatePresence>
-                              {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="mt-[25px] top-[115%] left-0 w-full"><MessageBox className="rounded-[4px] text-md py-[10px] px-[22px] z-10" theme="message-box01" variant="success" message="Your message has been sent successfully subscribed to our email list!" /></m.div>}
-                            </AnimatePresence>
-                          </div>
-                        )}
-                      </Formik>
-                      <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark" data={SocialIconsData} />
-                    </div>
-                  </ReactCustomScrollbar>
-                </Col>
-              </HamburgerMenu>
-            </div> */}
+          <Col className="col-auto text-right pe-0">
+            <SearchBar className="pr-0 xs:pl-[15px]" />
+            {/*<HeaderLanguage className="xs:pl-[15px]" />
+            <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />*/}
           </Col>
         </HeaderNav>
       </Header>
@@ -288,7 +256,7 @@ const HomeStartupPage = (props) => {
                 <Row sm={2} xs={1} className="gap-y-10">
                   <Col className="xs:text-center">
                     <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Hiring</span>
-                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personnel.</p>
+                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personel.</p>
                   </Col>
                   <Col className="xs:text-center">
                     <div className="">
@@ -467,7 +435,7 @@ const HomeStartupPage = (props) => {
                   </Row>
             </Container>
           </div>*/}
-          <Container fluid className="xs:opacity-0 xs:hidden">
+          {/* <Container fluid className="xs:opacity-0 xs:hidden">
             <Row>
             <h2 className="heading-4 font-serif font-semibold text-darkgray inline-block text-center mb-[65px] xs:mb-[30px]">Our Partners</h2>
               <m.div className="col mt-32 w-full md:mt-24 home-startup-interactivebanner" {...fadeIn}>
@@ -485,7 +453,7 @@ const HomeStartupPage = (props) => {
                 />
               </m.div>
                 </Row> 
-          </Container>
+          </Container> */}
         </Footer>
         {/* Footer End */}
       </InViewPort>

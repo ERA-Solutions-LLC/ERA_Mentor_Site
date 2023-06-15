@@ -21,7 +21,9 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { sendEmail, resetForm } from "../../../Functions/Utilities";
 import SideButtons from "../../../Components/SideButtons";
 
+// Era Img imports
 import ITimg8 from "../../../Assets/img/ITimg8.jpg"
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 
 // Data
 const SwiperImgData = [
@@ -48,9 +50,9 @@ const ContactUsModernPage = (props) => {
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
             <Link aria-label="header logo" className="flex items-center" to="/">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-black.webp' data-rjs='/assets/img/webp/logo-black@2x.webp' alt='logo' />
-                <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={ERALogo} data-rjs='/assets/img/webp/logo-black@2x.webp' alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src={ERALogo}  data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src={ERALogo}  data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
@@ -105,13 +107,19 @@ const ContactUsModernPage = (props) => {
                   <span className="font-serif block text-darkgray font-medium mb-[10px]">Headquarters</span>
                   <p className="w-[80%] mb-[5px] lg:w-[90%]">3841 E Danforth Rd. Suite 105 Edmond, OK 73034</p>
                   <span className="block mb-[10px]">Tel: +1.405.494.1237</span>
-                  <a href="https://www.google.com/maps/place/3841+E+Danforth+Rd+%23105,+Edmond,+OK+73034/@35.667448,-97.4326592,17z/data=!3m1!4b1!4m5!3m4!1s0x87b220190765597f:0xd424f1ce42a820ff!8m2!3d35.667448!4d-97.4300789?entry=ttu" target="_blank" rel="noreferrer" className="uppercase text-sm text-darkgray font-medium border-b hover:border-fastblue border-black hover:text-fastblue">View on google map</a>
+                  <GoogleMap
+          className="grayscale-0 w-[200px] h-[200px] xs:w-[100px] xs:h-[100px]"
+          location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3879672389376!2d-97.43265918887244!3d35.6674479724774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b220190765597f%3A0xd424f1ce42a820ff!2s3841%20E%20Danforth%20Rd%20%23105%2C%20Edmond%2C%20OK%2073034!5e0!3m2!1sen!2sus!4v1685659622723!5m2!1sen!2sus"
+        />
                 </Col>
                 <Col className="col-12 col-sm-6 xs:mb-[30px]">
                   <span className="font-serif block text-darkgray font-medium mb-[10px]">Remote Office</span>
                   <p className="w-[80%] mb-[5px] lg:w-[90%]">315 Montgomery San Francisco, CA 94104</p>
                   <span className="block mb-[10px]">Tel: +1.405.494.1237</span>
-                  <a href="https://www.google.com/maps/place/315+Montgomery+St,+San+Francisco,+CA+94104/@37.7921321,-122.4054098,17z/data=!3m1!4b1!4m6!3m5!1s0x8085808a17929195:0xfbda687154d7778c!8m2!3d37.7921321!4d-122.4028295!16s%2Fg%2F11c2hcc6ty?entry=ttu" target="_blank" rel="noreferrer" className="uppercase text-sm text-darkgray font-medium border-b hover:border-fastblue border-black hover:text-fastblue">View on google map</a>
+                  <GoogleMap
+          className="grayscale-0 w-[200px] h-[200px] xs:w-[100px] xs:h-[100px]"
+          location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9107170729358!2d-122.4028295!3d37.792132099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a17929195%3A0xfbda687154d7778c!2s315%20Montgomery%20St%2C%20San%20Francisco%2C%20CA%2094104!5e0!3m2!1sen!2sus!4v1686829850782!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        />
                 </Col>
               </Row>
             </Col>
@@ -197,7 +205,7 @@ const ContactUsModernPage = (props) => {
                             onChange={(response) => { setFieldValue("recaptcha", response) }}
                           />
                         )}
-                        <Buttons type="submit" className={`tracking-[0.5px] btn-fill rounded-none font-medium uppercase${isSubmitting ? " loading" : ""}`} themeColor="#232323" size="md" color="#fff" title="Send Message" />
+                        <Buttons onClick= {console.log('Im here')}type="submit" className={`tracking-[0.5px] btn-fill rounded-none font-medium uppercase${isSubmitting ? " loading" : ""}`} themeColor="#232323" size="md" color="#fff" title="Send Message" />
                         <AnimatePresence>
                           {status && <div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><MessageBox className="mt-[20px] py-[10px]" theme="message-box01" variant="success" message="Your message has been sent successfully!" /></div>}
                         </AnimatePresence>
@@ -215,7 +223,7 @@ const ContactUsModernPage = (props) => {
       {/* Section Start */}
       <m.section {...fadeIn}>
         <GoogleMap
-          className="grayscale h-[500px] xs:h-[300px]"
+          className="grayscale-0 h-[500px] xs:h-[300px]"
           location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3879672389376!2d-97.43265918887244!3d35.6674479724774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b220190765597f%3A0xd424f1ce42a820ff!2s3841%20E%20Danforth%20Rd%20%23105%2C%20Edmond%2C%20OK%2073034!5e0!3m2!1sen!2sus!4v1685659622723!5m2!1sen!2sus"
         />
       </m.section>

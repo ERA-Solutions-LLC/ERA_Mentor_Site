@@ -24,7 +24,7 @@ import EraLogo from '../../../Assets/img/era-logo-transparent.png'
 // Data
 import { InteractiveBannersData05 } from '../../../Components/InteractiveBanners/InteractiveBannersData';
 
-const TeamData = [
+const BenefitsData = [
   {
     img: 'https://via.placeholder.com/800x875',
     name: 'JEMMY WATSON',
@@ -305,11 +305,11 @@ const OurTeamPage = (props) => {
       <Header topSpace={{ desktop: true }} type="reverse-scroll">
         <HeaderNav theme="light" expand="lg" menu="light" className="py-[0px] lg:px-[15px] md:px-0" containerClass="sm:px-0">
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
-            <Link aria-label="header logo" className="flex items-center" to="/">
+            <Link aria-label="header logo" className="flex items-center" to="/home">
               <Navbar.Brand className="inline-block p-0 m-0">
-                <img className="default-logo" width="111" height="36" loading="lazy" src={EraLogo} data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
-                <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-fast-blue-black.webp' data-rjs='/assets/img/webp/logo-fast-blue-black@2x.webp' alt='logo' />
+                <img className="default-logo" width="111" height="36" loading="lazy" src={EraLogo} alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src={EraLogo} alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src={EraLogo} alt='logo' />
               </Navbar.Brand>
             </Link>
           </Col>
@@ -324,11 +324,11 @@ const OurTeamPage = (props) => {
           <Navbar.Collapse className="col-auto px-0 justify-end">
             <Menu {...props} />
           </Navbar.Collapse>
-          <Col className="col-auto text-right pe-0">
+          {/* <Col className="col-auto text-right pe-0">
             <SearchBar className="pr-0 xs:pl-[15px]" />
             <HeaderLanguage className="xs:pl-[15px]" />
             <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />
-          </Col>
+          </Col> */}
         </HeaderNav>
       </Header>
       {/* Header End */}
@@ -355,7 +355,7 @@ const OurTeamPage = (props) => {
 
       {/* Section start */}
       <section className="pt-0 px-[7%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0">
-        <div className="bg-gradient-to-tr from-[#f5bb8d] via-[#ffaea8] to-[#f3aaca] rounded-[5px] overflow-hidden pt-36 md:pt-[72px] sm:pt-24">
+        <div className="bg-slate-50 overflow-hidden pt-36 md:pt-[72px] sm:pt-24" style={{borderRadius: '8%'}}>
           <Container>
             <Row className="justify-center items-center">
               <m.div className="font-medium text-darkgray font-serif pb-[100px] lg:pb-[70px] ml-[97px] lg:ml-[0px] md:text-center col-xl-5 col-lg-6 col-md-7 order-lg-2" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
@@ -491,8 +491,8 @@ const OurTeamPage = (props) => {
         <Container>
           <m.div className="row justify-center" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
             <Col lg={5} sm={7} className="col-12 text-center mb-20 sm:mb-12">
-              <span className="font-serif font-medium text-fastblue block mb-[15px]">Opening positions</span>
-              <h5 className="font-serif font-medium text-darkgray inline-block -tracking-[.5px]">We talk a lot about hope helping and teamwork</h5>
+              <span className="font-serif font-medium text-fastblue block mb-[15px]">Open positions</span>
+              <h5 className="font-serif font-medium text-darkgray inline-block -tracking-[.5px]">We talk a lot about hope, helping, and teamwork</h5>
             </Col>
           </m.div>
           <Row className="justify-center">

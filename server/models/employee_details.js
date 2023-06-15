@@ -20,7 +20,7 @@ async function deleteEmployeeDetails(id) {
     return await knex('employee_details').where({id: id}).del()
 }
 
-modules.export = {
+module.export = {
     getAllEmployeeDetails,
     findEmployeeDetailsById,
     insertEmployeeDetails,

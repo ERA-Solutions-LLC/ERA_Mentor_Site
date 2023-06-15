@@ -359,7 +359,7 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  <Route path="/" element={<LandingPage />} />
+                  <Route path="/" element={<ERAHome />} />
 
                   {/* Headers */}
                   <Route path="headers">
@@ -412,7 +412,7 @@ function App() {
                   <Route path="/home-marketing-agency" element={<MarketingAgencyPage style={{ "--base-color": "#f4d956" }} />} />
 
                   {/* ERA PAGES */}
-                  <Route path="/home" element={<ERAHome/>} />
+                  <Route path="/" element={<ERAHome/>} />
                   <Route path="/about" element={<ERAWhoWeAre/>} />
                   <Route path="/contact" element={<ERAContactUs/>} />
                   <Route path="/upskill" element={<ERAUpskills/>} />
