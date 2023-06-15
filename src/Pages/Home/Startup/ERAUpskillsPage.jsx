@@ -30,6 +30,7 @@ import ITImg4 from "../../../Assets/img/ITimg4.jpg"
 
 //imports
 import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+import Smile from "../../../Assets/img/smile.png"
 
 // Data
 import { FilterData } from '../../../Components/Portfolio/PortfolioData';
@@ -99,7 +100,7 @@ const IconWithTextData = [
   {
     icon: "line-icon-Archery-2 text-fastblue text-[40px]",
     title: "Broadband Certifications",
-    content: "Get certified in broadband and networking",
+    content:  "Get certified in broadband and networking",
   },
   {
     icon: "line-icon-Knight text-fastblue text-[40px]",
@@ -110,7 +111,7 @@ const IconWithTextData = [
 
 const ProgressBarData = [
   {
-    title: "Kinesthetic",
+    title: "Hands On",
     value: "60",
   },
   {
@@ -118,7 +119,7 @@ const ProgressBarData = [
     value: "20",
   },
   {
-    title: "Audio",
+    title: "Research",
     value: "20",
   },
 
@@ -351,13 +352,13 @@ const AboutMePage = (props) => {
       {/* Header End */}
       <SideButtons />
       {/* Section Start */}
-      <section className="p-0 bg-cover bg-center relative" style={{ backgroundImage: "url(" + ITImg4 + ")" }}>
+      <section className="p-0 bg-cover bg-center relative" style={{ backgroundImage: "url(" + Smile + ")", opacity: '0.9' }}>
       <Container className="relative h-[800px] md:h-[600px] sm:h-[400px]">
       <Row className="items-center h-full md:pb-40 sm:pb-0">
         <Col className="d-flex justify-content-center align-items-center">
           <div className="text-center">
-            <h2 className="font-serif text-white -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center">We Offer Training</h2>
-            <p className="font-serif text-white leading-[30px] opacity-80 font-light text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 18}}>From software certifications to broadband certifications, We have you covered.</p>
+            <h2 className="font-serif -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center" style={{color: '#778899'}}>We Offer Training </h2>
+            <p className="font-serif leading-[30px] opacity-80 text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 22, color: '#778899', fontWeight: '500'}}>From software certifications to broadband certifications, We have you covered.</p>
           </div>
         </Col>
       </Row>
@@ -561,17 +562,8 @@ const AboutMePage = (props) => {
       <m.section className="overflow-hidden" {...fadeIn}>
         <Container fluid >
           <Row style={{display: 'flex', justifyContent: 'center'}}>
-            <Col xl={{ span: 3, order: 1 }} lg={{ span: 5, order: 2 }} xs={{ order: 1 }} className="about-me-blockquote bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]" style={{ borderRadius: "8% 0 0 8%", width: '28vw'}}>
-              <Blockquote
-                className="h-full font-medium flex flex-col justify-center"
-                theme="blockquote-style-01"
-                title="What new technology does is create new opportunities to do a job that customers want done."
-                icon="ti-quote-left"
-                author="- Tim O-Reilly"
-              />
-            </Col>
             {/* <Col xl={{ span: 5, order: 2 }} lg={{ span: 12, order: 1 }} xs={{ order: 2 }} className="cover-background lg:h-[500px] sm:h-[300px] bg-cover" style={{ backgroundImage: "url(" + ITImg3  + ")" }}></Col> */}
-            <Col xl={4} lg={7} xs={{ order: 3 }} className="bg-darkgray p-28 xl:p-12 lg:p-24" style={{ borderRadius: "0 7% 7% 0", width: '68vw'}}>
+            <Col xl={4} lg={7} xs={{ order: 3 }} className="bg-darkgray p-28 xl:p-12 lg:p-24" style={{ borderRadius: "20px", width: '80vw', background: '#0038e3'}}>
               <Row className="justify-center">
                 <Col className="col-md mb-8 sm:mb-12">
                   <h6 className="font-serif text-white">Our Training Agenda</h6>
@@ -582,25 +574,25 @@ const AboutMePage = (props) => {
                   <div className="font-serif text-white mb-[5px] flex">
                     <span className="w-[10px] h-[1px] bg-white self-center relative -top-[1px] mr-[10px] shrink-0"></span>
                     <div className="grow-1">Repitition</div></div>
-                  <p className="md:w-[70%] xs:w-full">Learn coding quickly and efficiently by repitition.</p>
+                  <p className="text-white md:w-[70%] xs:w-full">Learn coding quickly and efficiently by repitition.</p>
                 </Col>
                 <Col className="mb-[3.5rem]">
                   <div className="font-serif text-white mb-[5px] flex">
                     <span className="w-[10px] h-[1px] bg-white self-center relative -top-[1px] mr-[10px] shrink-0"></span>
                     <div className="grow-1">Design</div></div>
-                  <p className="md:w-[70%] xs:w-full">Create scalable systems that help businesses succeed.</p>
+                  <p className="text-white md:w-[70%] xs:w-full">Create scalable systems that help businesses succeed.</p>
                 </Col>
                 <Col className="sm:mb-[3.5rem]">
                   <div className="font-serif text-white mb-[5px] flex">
                     <span className="w-[10px] h-[1px] bg-white self-center relative -top-[1px] mr-[10px] shrink-0"></span>
                     <div className="grow-1">Concepts</div></div>
-                  <p className="md:w-[70%] xs:w-full">Think like a programmer and gain the knowledge to tackle any problem.</p>
+                  <p className="text-white md:w-[70%] xs:w-full">Think like a programmer and gain the knowledge to tackle any problem.</p>
                 </Col>
                 <Col>
                   <div className="font-serif text-white mb-[5px] flex">
                     <span className="w-[10px] h-[1px] bg-white self-center relative -top-[1px] mr-[10px] shrink-0"></span>
                     <div className="grow-1">Real World Problem Solving</div></div>
-                  <p className="md:w-[70%] xs:w-full">Complete projects with requirements and solve real world problems.</p>
+                  <p className="text-white md:w-[70%] xs:w-full">Complete projects with requirements and solve real world problems.</p>
                 </Col>
               </Row>
             </Col>
