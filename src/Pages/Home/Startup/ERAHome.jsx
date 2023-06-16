@@ -28,6 +28,7 @@ import ITimg4 from "../../../Assets/img/ITimg4.jpg"
 import ITimg7 from "../../../Assets/img/ITimg7.jpg"
 import ITimg8 from "../../../Assets/img/ITimg8.jpg"
 import ITimg9 from "../../../Assets/img/ITimg9.jpg"
+import CorporatePeople from "../../../Assets/img/corporate.png"
 
 import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 
@@ -236,17 +237,17 @@ const HomeStartupPage = (props) => {
       {/* Lazy Load HTML */}
       <InViewPort>
         {/* Section Start */}
-        <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
+        {/* <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
           <Overlap>
             <m.img
               {...{ ...zoomIn, transition: { duration: .8 } }}
               className="mx-auto border-[10px] rounded-full p-0 shadow-black w-[170px] h-[170px] border-white box-shadow-large" src={ITimg4} alt="startup" />
           </Overlap>
-        </section>
+        </section> */}
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
+        <section className="mt-5 pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
           <Container>
             <m.div className="row justify-center" {...fadeIn}>
               <Col lg={5} sm={9} className="md:text-center md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
@@ -317,7 +318,7 @@ const HomeStartupPage = (props) => {
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>
                 <div className="-mr-[30vw] relative md:mr-0" >
-                  <img src={ITimg8} width={1109} height={638} className="overflow-hidden" alt="" />
+                  <img src={CorporatePeople} width={1109} height={638} className="overflow-hidden rounded-md" alt=""  />
                 </div>
               </m.div>
             </Row>
