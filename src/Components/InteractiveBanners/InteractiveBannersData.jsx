@@ -1,3 +1,7 @@
+// Import Imgs
+import Advisor from '../../Assets/img/advisor.jpg'
+import JrDev from '../../Assets/img/jr-dev.jpg'
+
 const InteractiveBannersData01 = [
     {
         subtitle: "Branding",
@@ -140,29 +144,29 @@ const InteractiveBannersData04 = [
 
 const InteractiveBannersData05 = [
     {
-        title: "Senior web designer",
-        subtitle: "2 position open",
+        title: "Transition Advisor",
+        subtitle: "position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
         btnLink: "/contact",
         icon: "ti-user"
     },
     {
-        title: "SENIOR DEVELOPER",
-        subtitle: "3 position open",
+        title: "Registered Apprentice",
+        subtitle: "position open",
         img: "https://via.placeholder.com/800x610",
         btnTitle: "Apply now",
         btnLink: "/contact",
         icon: "ti-user"
     },
-    {
-        title: "UX design developer",
-        subtitle: "4 position open",
-        img: "https://via.placeholder.com/800x610",
-        btnTitle: "Apply now",
-        btnLink: "/page/contact-simple",
-        icon: "ti-user"
-    }
+    // {
+    //     title: "UX design developer",
+    //     subtitle: "4 position open",
+    //     img: "https://via.placeholder.com/800x610",
+    //     btnTitle: "Apply now",
+    //     btnLink: "/page/contact-simple",
+    //     icon: "ti-user"
+    // }
 ]
 
 const InteractiveBannersData06 = [
