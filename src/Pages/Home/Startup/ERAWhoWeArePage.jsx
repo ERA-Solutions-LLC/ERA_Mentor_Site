@@ -19,11 +19,15 @@ import Clients from '../../../Components/Clients/Clients';
 import FooterStyle01 from '../../../Components/Footers/FooterStyle01';
 import Videos from "../../../Components/Videos/Videos";
 import SideButtons from "../../../Components/SideButtons";
+
+// Img Imports
 import ITImg from "../../../Assets/img/ITimg.jpg"
 import ITImg2 from "../../../Assets/img/ITimg2.jpg"
 import ITImg3 from "../../../Assets/img/ITimg3.jpg"
 import ITimg5 from "../../../Assets/img/ITimg5.jpg"
 import ITimg6 from "../../../Assets/img/ITimg6.jpg"
+import Dev1 from '../../../Assets/img/dev1.jpg'
+import Colab from '../../../Assets/img/colab.jpg'
 
 // Data
 import { TextBoxData02 } from '../../../Components/TextBox/TextBoxData';
@@ -32,6 +36,7 @@ import { TestimonialsData01 } from '../../../Components/Testimonials/Testimonial
 //Imports
 
 import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+import TeamImg2 from '../../../Assets/img/TeamImg2.jpg'
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 
@@ -141,7 +146,7 @@ const WhoWeArePage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col className="col-auto text-right pe-0">
-            <SearchBar className="pr-0 xs:pl-[15px]" />
+            {/* <SearchBar className="pr-0 xs:pl-[15px]" /> */}
             {/*<HeaderLanguage className="xs:pl-[15px]" />
             <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />*/}
           </Col>
@@ -155,13 +160,13 @@ const WhoWeArePage = (props) => {
           className="py-[160px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] md:h-[550px] sm:h-[350px]"
           src="video path"
           loop={true}
-          poster={ITImg}
+          poster={TeamImg2}
           opacity={0.5}>
           <Container className="bg-cover h-full">
             <Row className="items-end justify-center h-full">
               <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">
-                <span className="mb-[5px] font-serif text-white opacity-60 block xs:mb-[15px]">Helping Veterans and Businesses at the same time</span>
-                <h1 className="text-white font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[30px] xs:leading-[40px]">About ERA Solutions </h1>
+                <span className="mb-[5px] text-lg font-serif text-slate-50 bg-black opacity-60 block xs:mb-[15px]">Helping Veterans and Businesses at the same time</span>
+                <h1 className="text-slate-50 bg-black opacity-60 font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[30px] xs:leading-[40px]">About Era Solutions </h1>
                 <span className="h-[80px] inline-block bg-white mb-20 sm:mb-12 sm:h-[50px]"></span>
               </Col>
             </Row>
@@ -204,8 +209,8 @@ const WhoWeArePage = (props) => {
                 </Col>
               </Row>
             </Col>
-            <Col lg={6} xl={{ offset: 1 }} className="align-self-end text-center text-xl-start">
-              <img className="md:mx-auto" loading="lazy" src={ITimg6} width="504" height="666" style={{ borderRadius: '8%'}} alt="who-we-are" />
+            <Col lg={6} xl={{ offset: 1 }} className="align-self-center text-center text-xl-start">
+              <img className="md:mx-auto rounded-xl" loading="lazy" src={Dev1} width="504" height="766"  alt="who-we-are" />
             </Col>
           </Row>
         </Container>
@@ -281,7 +286,7 @@ const WhoWeArePage = (props) => {
         <Container fluid>
           <Row className="justify-center">
             <Col>
-              <img loading="lazy" className="mx-auto" src={ITImg3} style={{ borderRadius: '8%'}} alt="who-we-are" width="1490" height="550" />
+              <img loading="lazy" className="mx-auto rounded-xl" src={Colab}  alt="who-we-are" width="1490" height="550" />
             </Col>
           </Row>
         </Container>

@@ -181,7 +181,7 @@ const HomeStartupPage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col className="col-auto text-right pe-0">
-            <SearchBar className="pr-0 xs:pl-[15px]" />
+            {/* <SearchBar className="pr-0 xs:pl-[15px]" /> */}
             {/*<HeaderLanguage className="xs:pl-[15px]" />
             <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />*/}
           </Col>
@@ -318,7 +318,7 @@ const HomeStartupPage = (props) => {
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>
                 <div className="-mr-[30vw] relative md:mr-0" >
-                  <img src={CorporatePeople} width={1109} height={638} className="overflow-hidden rounded-md" alt=""  />
+                  <img src={CorporatePeople} width={1109} height={638} className="overflow-hidden rounded-3xl" alt=""  />
                 </div>
               </m.div>
             </Row>

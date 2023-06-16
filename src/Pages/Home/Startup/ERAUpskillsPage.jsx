@@ -343,7 +343,7 @@ const AboutMePage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col className="col-auto text-right pe-0">
-            <SearchBar className="pr-0" />
+            {/* <SearchBar className="pr-0" /> */}
             {/*<HeaderLanguage />
             <HeaderCart />*/}
           </Col>
@@ -357,8 +357,8 @@ const AboutMePage = (props) => {
       <Row className="items-center h-full md:pb-40 sm:pb-0">
         <Col className="d-flex justify-content-center align-items-center">
           <div className="text-center">
-            <h2 className="font-serif -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center" style={{color: '#778899'}}>We Offer Training </h2>
-            <p className="font-serif leading-[30px] opacity-80 text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 22, color: '#778899', fontWeight: '500'}}>From software certifications to broadband certifications, We have you covered.</p>
+            <h2 className="text-slate-50 bg-black opacity-60  font-serif -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center" style={{color: '#778899'}}>We Offer Training </h2>
+            <p className="text-slate-50 bg-black opacity-60  font-serif leading-[30px] text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 22, color: '#778899', fontWeight: '500'}}>From software certifications to broadband certifications, We have you covered.</p>
           </div>
         </Col>
       </Row>
@@ -395,7 +395,7 @@ const AboutMePage = (props) => {
               <h5 className="text-darkgray font-medium font-serif block mb-[25px]">Get ahead and plan for your future</h5>
               <p>Technology continues to advance at an exponential rate, but alongside this growth arises a great need for experienced talent to fill many new jobs. With the advent of the COVID-19 pandemic which led to shortages and shutdowns across numerous industries, an increased need has arisen for innovation and emerging technologies in order to be competitive in the ever-changing market space. Learn about some of the programs Era Solutions offers to gain the necessary skills for careers in the IT industry!</p>
             </Col>
-            <Col lg={{ span: 5, offset: 1 }} className="mb-[30px]">
+            <Col lg={{ span: 5, offset: 1 }} className="mb-[30px] ">
               <ProgressBar
                 theme="progressbar-style-01 about-me-progressbar"
                 data={ProgressBarData}

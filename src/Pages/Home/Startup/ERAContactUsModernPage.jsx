@@ -68,7 +68,7 @@ const ContactUsModernPage = (props) => {
             <Menu {...props} />
           </Navbar.Collapse>
           <Col className="col-auto text-right pe-0">
-            <SearchBar className="pr-0 xs:pl-[15px]" />
+            {/* <SearchBar className="pr-0 xs:pl-[15px]" /> */}
             {/*<HeaderLanguage className="xs:pl-[15px]" />
             <HeaderCart className="xs:pl-[15px]" style={{ "--base-color": "#0038e3" }} />*/}
           </Col>
@@ -87,7 +87,7 @@ const ContactUsModernPage = (props) => {
               </h1>
             </Col>
             <Col className="p-0 sm:!px-[15px]">
-              <h4 className="font-medium text-darkgray font-serif mb-0">Sounds great, but how do I sign up?</h4>
+              <h4 className="font-medium text-slate-50 bg-black opacity-60  font-serif mb-0">Sounds great, but how do I sign up?</h4>
             </Col>
           </Row>
         </Container>
