@@ -497,9 +497,9 @@ const OurTeamPage = (props) => {
           </m.div>
           <Row className="justify-center">
             <Col>
-              <InteractiveBanners05
+              <InteractiveBanners05 className='object-contain h-800 w-610'
                 grid="row-cols-1 justify-center gap-y-[5.5rem] xs:px-0"
-                data={InteractiveBannersData05}
+                data= {InteractiveBannersData05}
                 animation={fadeIn}
                 animationDelay={0.3}
               />
