@@ -1,6 +1,7 @@
 // Import Imgs
-import Advisor from '../../Assets/img/advisor.jpg'
-import JrDev from '../../Assets/img/jr-dev.jpg'
+import Advisor from '../../Assets/img/Ta.jpg'
+import TA from '../../Assets/img/dev2.jpg'
+import JrDev from '../../Assets/img/ItCollab.png'
 
 const InteractiveBannersData01 = [
     {
@@ -146,27 +147,27 @@ const InteractiveBannersData05 = [
     {
         title: "Transition Advisor",
         subtitle: "position open",
-        img: "https://via.placeholder.com/800x610",
+        img: Advisor,
         btnTitle: "Apply now",
         btnLink: "/contact",
         icon: "ti-user"
     },
     {
-        title: "Registered Apprentice",
+        title: "Technical Sales Apprentice",
         subtitle: "position open",
-        img: "https://via.placeholder.com/800x610",
+        img: TA,
         btnTitle: "Apply now",
         btnLink: "/contact",
         icon: "ti-user"
     },
-    // {
-    //     title: "UX design developer",
-    //     subtitle: "4 position open",
-    //     img: "https://via.placeholder.com/800x610",
-    //     btnTitle: "Apply now",
-    //     btnLink: "/page/contact-simple",
-    //     icon: "ti-user"
-    // }
+    {
+        title: "Software Dev Apprentice",
+        subtitle: "position open",
+        img: JrDev,
+        btnTitle: "Apply now",
+        btnLink: "/contact",
+        icon: "ti-user"
+    }
 ]
 
 const InteractiveBannersData06 = [
