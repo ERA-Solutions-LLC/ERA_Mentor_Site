@@ -62,7 +62,7 @@ const blogMasonryData = blogData.filter((item) => item.blogType === "masonry").f
 const iconWithTextData = [
   {
     icon: "line-icon-Cursor-Click2 text-[#27ae60]",
-    title: "We Empower Business To Build A Workforce That Delivers Exceptional Results",
+    title: "We Help Businesses to Transform Their Employing Habits into the Ever-Evolving Digital Era.",
     content: "Providing platform opportunities",
   },
   {
@@ -79,16 +79,16 @@ const iconWithTextData = [
 
 const ProcessStepData = [
   {
-    title: "Building Your Companies Workforce",
-    content: "Building functional teams to meet your requirements and grow your company.",
+    title: "Strengthen Your Business's Workforce with Experienced Military Professionals.",
+    content: "Forge dynamic and cohesive teams to surpass your requirements and fuel exponential growth for your company.",
   },
   {
-    title: "Promoting the Right Employees",
-    content: "Recognizing talent.  Creating a loyal atmosphere for employees to succeed.",
+    title: "Nurture growth: Empower and Promote the Right Talent within Your Organization",
+    content: "Unleash the power of talent: Cultivate a nurturing environment for employee success and lasting loyalty.",
   },
   {
-    title: "Fostering Retention of Employees",
-    content: "Keeping Employees that will help the business succeed.",
+    title: "Create an Unforgettable Workplace: Foster employee retention and fulfillment",
+    content: "Unlock the key to success: Retain top talent to propel your business forward.",
   }
 ]
 
@@ -194,6 +194,7 @@ const HomeStartupPage = (props) => {
       {/* Section Start */}
       {/*<StartupPageBannerSlider /> */}
       <ERABackgroundVid />
+
       {/* Section End */}
 
       {/* Section Start */}
@@ -251,13 +252,13 @@ const HomeStartupPage = (props) => {
           <Container>
             <m.div className="row justify-center" {...fadeIn}>
               <Col lg={5} sm={9} className="md:text-center md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
-                <h2 className="heading-5 font-serif leading-[3rem] text-darkgray font-semibold w-[85%] lg:w-full">We provide qualified veterans for hire and offer training programs to assist transitioning military members</h2>
+                <h2 className="heading-5 font-serif leading-[3rem] text-darkgray font-semibold w-[85%] lg:w-full">From service to success, we empower veterans with specialize training and job placement support</h2>
               </Col>
               <Col lg={{ span: 6, offset: 1 }}>
                 <Row sm={2} xs={1} className="gap-y-10">
                   <Col className="xs:text-center">
                     <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Hiring</span>
-                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personel.</p>
+                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personnel.</p>
                   </Col>
                   <Col className="xs:text-center">
                     <div className="">
@@ -313,7 +314,7 @@ const HomeStartupPage = (props) => {
             <Row className="items-center justify-center">
               <Col xl={5} lg={6} md={10}>
                 <span className="font-serif text-xmd font-medium text-erablue inline-block mb-[20px] sm:mb-[10px]">Business process</span>
-                <h2 className="heading-5 font-serif font-semibold text-darkgray block -tracking-[.5px] mb-20 w-[85%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Understanding How We Work</h2>
+                <h2 className="heading-5 font-serif font-semibold text-darkgray block -tracking-[.5px] mb-20 w-[85%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
                 <ProcessStep grid="row-cols-1" theme='process-step-style-02' data={ProcessStepData} animation={fadeIn} />
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>
