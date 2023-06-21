@@ -132,6 +132,31 @@ const CounterData05 = [
         title:"Happy clients",
         content:"We love clients",
     },
+    const CounterData05 = [
+        {
+            number:{
+                text: "1227",
+                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            },
+            title:"Winning awards",
+            content:"For creative design",
+        },
+        {
+            number:{
+                text: "1947",
+                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            },
+            title:"Working hours",
+            content:"Desperate for work",
+        },
+        {
+            number:{
+                text: "1587",
+                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            },
+            title:"Happy clients",
+            content:"We love clients",
+        },
 ]
 
 
