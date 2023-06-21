@@ -20,7 +20,7 @@ async function deleteCompanyUser(id) {
     return await knex('company_user').where({id: id}).del()
 }
 
-modules.export = {
+module.export = {
     getAllCompanyUsers,
     findCompanyUserById,
     insertCompanyUser,
