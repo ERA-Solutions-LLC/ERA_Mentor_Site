@@ -1,69 +1,67 @@
-const router = require('express').Router()
-const { json } = require('body-parser')
+const express = require('express');
+const router = express.Router();
+const { json } = require('body-parser');
+const EmployeeDetails = require('../../models/employee_details');
 
-const Employee_details = require('../../models/employee_details')
+router.get('/getemployeedetails', async (req, res) => {
+  try {
+    const employeeDetails = await EmployeeDetails.getAllEmployeeDetails();
+    res.json(employeeDetails);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.get('/getemployeedetails/', (req, res) => {
-    Employee_details.getAllEmployeeDetails()
-    .then(employee_details => {
-        res.json(employee_details)
-    })
-    .catch(err => res.send(err))
-})
+router.get('/getemployeedetails/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const employeeDetails = await EmployeeDetails.findEmployeeDetailsById(id);
+    if (employeeDetails) {
+      res.json(employeeDetails);
+    } else {
+      res.status(404).json({ message: 'Employee details by that id not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.get('/getemployeedetails/:id', (req, res) => {
-    const { id } = req.params
-    Employee_details.findEmployeeDetailsById(id)
-    .then(employee_details => {
-        if(employee_details) {
-            res.status(200).json(employee_details)
-        }
-        else {
-            res.status(400).json({message: 'Employee details by that id not found'})
-        }
-    })
-})
+router.post('/insertemployeedetails', async (req, res) => {
+  try {
+    await EmployeeDetails.insertEmployeeDetails(req.body);
+    res.status(201).json({ message: 'Employee details created' });
+  } catch (error) {
+    res.status(500).json({ error: error.message, message: 'Failed to create employee details' });
+  }
+});
 
-router.post('/insertemployeedetails:', (req, res) => {
-    req.body.ed_id = req.params.id
-    Employee_details.insertEmployeeDetails(req.body)
-    .then(e => {
-        res.status(201).json({message: 'Employee details created'})
-    })
-    .catch(err => {
-        res.status(500).json({...err, message: 'Failed to create employee details'})
-    })
-})
+router.put('/updateemployeedetails/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedDetails = await EmployeeDetails.updateEmployeeDetails(req.body, id);
+    if (!updatedDetails) {
+      res.status(404).json({ message: 'No employee details by that id exist' });
+    } else {
+      const employeeDetails = await EmployeeDetails.findEmployeeDetailsById(id);
+      res.json(employeeDetails);
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.put('/updateemployeedetails/:id', (req, res) => {
-    Employee_details.updateEmployeeDetails(req.body, req.params.id)
-    .then(updateemployeeDetails => {
-        if(!updateemployeeDetails) {
-            res.status(400).json({ message: 'No employee details by that id exist'})
-        } else {
-            Employee_details.findEmployeeDetailsById(req.params.id)
-            .then(employeedetails => {
-                res.status()
-            })
-        }
-    })
-    .catch(err => {
-        res.status(500).json(err)
-    })
-})
-
-router.delete('/deleteemployeedetails/:id', (req, res) => {
-    Employee_details.deleteEmployeeDetails(req.params.id)
-    .then(employeedetails => {
-        if(!employeedetails) {
-            res.status(400).json({message: 'No employee details by that id exist'})
-        } else {
-            res.status(200).json({ message: 'Employee details deleted'})
-        }
-    })
-    .catch(err => {
-        res.status(500).json(err)
-    })
-})
+router.delete('/deleteemployeedetails/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedDetails = await EmployeeDetails.deleteEmployeeDetails(id);
+    if (!deletedDetails) {
+      res.status(404).json({ message: 'No employee details by that id exist' });
+    } else {
+      res.json({ message: 'Employee details deleted' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;

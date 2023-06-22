@@ -22,6 +22,8 @@ const mailRoutes = require('./mail')
 
 const contactFormRoutes = require('./data/routes/contact_form_route')
 
+const leaveTimeRoutes = require('./data/routes/leave_time_route')
+
 
 //include all route paths and point to the files defining routes
 
@@ -32,6 +34,8 @@ server.use('/company-user', companyUserRoutes)
 server.use('/mail', mailRoutes)
 
 server.use('/contact-form', contactFormRoutes)
+
+server.use('/leave_time', leaveTimeRoutes)
 
 
 

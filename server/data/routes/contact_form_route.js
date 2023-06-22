@@ -1,72 +1,75 @@
-const router = require('express').Router()
-const { json } = require('body-parser')
+const express = require('express');
+const router = express.Router();
+const { json } = require('body-parser');
+const ContactForm = require('../../models/contact_form_model');
 
-const Contact_form = require('../../models/contact_form_model')
+router.get('/', (req, res) => {
+  res.send('Hello world');
+});
 
-router.get('/getcontactform/', (req, res) => {
-    Contact_form.getAllContactForm()
-    .then(contact_form => {
-        res.json(contact_form)
-    })
-    .catch(err => res.send(err))
-})
+router.get('/getcontactform', async (req, res) => {
+  try {
+    const contactForm = await ContactForm.getAllContactForm();
+    res.json(contactForm);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.get('/getcontactform/:id', (req, res) => {
-    const { id } = req.params
-    Contact_form.findContactFormById(id)
-    .then(contact_form => {
-        if(contact_form) {
-            res.status(200).json(contact_form)
-        }
-        else {
-            res.status(400).json({message: 'contact form by that id not found'})
-        }
-    }) 
-})
+router.get('/getcontactform/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const contactForm = await ContactForm.findContactFormById(id);
+    if (contactForm) {
+      res.json(contactForm);
+    } else {
+      res.status(404).json({ message: 'Contact form by that id not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.post('/insertcontactform/:', (req, res) => {
-    req.body.client_id = req.params.id
-    Contact_form.insertContactForm(req.body)
-    .then(e => {
-        res.status(201).json({message: 'contact form user created'})
-    })
-    .catch(err => {
-        res.status(500).json({...err, message: 'failed to create contact form' })
-    })
-})
+router.post('/insertcontactform', async (req, res) => {
+  try {
+    await ContactForm.insertContactForm(req.body);
+    res.status(201).json({ message: 'Contact form user created' });
+  } catch (error) {
+    res.status(500).json({ error: error.message, message: 'Failed to create contact form' });
+  }
+});
 
-router.put('/updatecontactform/:id', (req, res) => {
-    Contact_form.updateContactForm(req.body, req.params.id)
-    .then(updateContactForm => {
-        if(!updateContactForm) {
-            res.status(404).json({ message: 'No contact form by that id exist'})
-        } else {
-            Contact_form.findContactFormById(req.params.id)
-            .then(Contact_form => {
-               res.status() 
-            })
-        }
-})
- .catch(err => {
-    res.status(500).json(err)
- }) 
-})
+router.put('/updatecontactform/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedContactForm = await ContactForm.updateContactForm(req.body, id);
+    if (!updatedContactForm) {
+      res.status(404).json({ message: 'No contact form by that id exists' });
+    } else {
+      const contactForm = await ContactForm.findContactFormById(id);
+      res.json(contactForm);
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.delete('/deletecontactform/:id', (req,res) => {
-    Contact_form.deleteContactForm(req.params.id)
-    .then(contact_form =>  {
-        if(!contact_form)  {
-            res.status(400).json({message: 'No contact form by that id exist'})
-        } else {
-            res.status(200).json({ message: 'Contact form deleted'})
-        }
-    })
-    .catch(err => {
-        res.status(500).json(err)
-    })
-})
+router.delete('/deletecontactform/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedContactForm = await ContactForm.deleteContactForm(id);
+    if (!deletedContactForm) {
+      res.status(400).json({ message: 'No contact form by that id exists' });
+    } else {
+      res.json({ message: 'Contact form deleted' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;
+
 
 
 
