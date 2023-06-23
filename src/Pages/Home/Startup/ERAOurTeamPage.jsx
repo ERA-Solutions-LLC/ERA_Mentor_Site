@@ -363,7 +363,7 @@ const OurTeamPage = (props) => {
                 <h4 className="-tracking-[.5px] mb-[45px] xs:w-[99%]">Discover our current job openings, connect with our dedicated team, and <span className="font-semibold">embark on a transformative journey with us.</span></h4>
                 <ScrollTo to="position-open" offset={0} delay={0} spy={true} smooth={true} duration={800}>
                   <Buttons type="submit"
-                   ariaLabel="button" className="font-medium font-serif uppercase hover:text-white btn-expand" size="lg" color="#3975f6" themeColor="#232323" title="Open Jobs" style={{ borderRadius: '5%'}}  />
+                   ariaLabel="button" className="font-medium font-Poppins uppercase hover:text-white btn-expand" size="lg" color="#3975f6" themeColor="#232323" title="Open Jobs" style={{ borderRadius: '5%'}}  />
                 </ScrollTo>
               </m.div>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 6, order: 1, offset: 0 }}>
