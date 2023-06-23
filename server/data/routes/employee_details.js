@@ -12,28 +12,27 @@ router.get('/getemployeedetails', async (req, res) => {
   }
 });
 
-router.get('/getemployeedetails/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const employeeDetails = await EmployeeDetails.findEmployeeDetailsById(id);
-    if (employeeDetails) {
-      res.json(employeeDetails);
-    } else {
-      res.status(404).json({ message: 'Employee details by that id not found' });
-    }
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+router.get('/employee-details/', (req, res) => {
+    Employee_details.getAllEmployeeDetails()
+    .then(employee_details => {
+        res.json(employee_details)
+    })
+    .catch(err => res.send(err))
+})
 
-router.post('/insertemployeedetails', async (req, res) => {
-  try {
-    await EmployeeDetails.insertEmployeeDetails(req.body);
-    res.status(201).json({ message: 'Employee details created' });
-  } catch (error) {
-    res.status(500).json({ error: error.message, message: 'Failed to create employee details' });
-  }
-});
+router.get('/employee-details/:id', (req, res) => {
+    const { id } = req.params
+    Employee_details.findEmployeeDetailsById(id)
+    .then(employee_details => {
+        if(employee_details) {
+            res.status(200).json(employee_details)
+        }
+        else {
+            res.status(400).json({message: 'Employee details by that id not found'})
+        }
+    })
+})
+
 
 router.put('/updateemployeedetails/:id', async (req, res) => {
   try {

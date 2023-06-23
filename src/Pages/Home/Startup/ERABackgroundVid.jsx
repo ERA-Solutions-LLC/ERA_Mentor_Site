@@ -9,13 +9,10 @@ const ERABackgroundVid = () => {
     
     return (
     <Videos
-      className="py-[160px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[550px] md:h-[400px] sm:h-auto xs:h-[26vh]"
+      className=" w-full h-full backdrop-brightness-50 py-[160px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[550px] md:h-[400px] sm:h-auto xs:h-[26vh]"
       src={bgVideo}
       loop={true}
-      poster="/assets/img/mfg-close.png"
-      //overlay={["#0039e3", "#4132e0", "#4132e0", "#741bd9", "#8600d4"]} 
-      //opacity="0.8">
-      opacity={.8}>
+      poster="/assets/img/mfg-close.png">
       <Container className="h-full mx-lg">
         <Row className="items-end justify-center h-full w-full">
           <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">

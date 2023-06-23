@@ -31,7 +31,7 @@ const leaveTimeRoutes = require('./data/routes/leave_time_route')
 
 //include all route paths and point to the files defining routes
 
-server.use('/employee-details', employeeDetailsRoutes)
+server.use('/', employeeDetailsRoutes)
 
 server.use('/company-user', companyUserRoutes)
 

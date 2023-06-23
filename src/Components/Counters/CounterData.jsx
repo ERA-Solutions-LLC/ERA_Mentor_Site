@@ -1,24 +1,21 @@
 const CounterData01 = [
     {
         number:{
-            text: "2530",
+            text: "10",
         },
-        title: "Custom shortcodes",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title:"Training Programs",
     },
     {
         number:{
-            text: "2000",
+            text: "40",
         },
-        title: "Completed projects",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title:"Years of Combined Experience",
     },
     {
         number:{
-            text: "1958",
+            text: "100",
         },
-        title: "Working hours",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title:"Highly Skilled Employees",
     },
 ]
 
@@ -56,27 +53,21 @@ const CounterData02 = [
 const CounterData03 = [
     {
         number:{
-            text: "24",
+            text: "10",
         },
-        title:"COUNTRIES",
+        title:"Training Programs",
     },
     {
         number:{
-            text: "28",
+            text: "40",
         },
-        title:"LANGUAGES",
+        title:"Years of Combined Experience",
     },
     {
         number:{
-            text: "72",
+            text: "100",
         },
-        title:"CHANNELS",
-    },
-    {
-        number:{
-            text: "92",
-        },
-        title:"BRANDS",
+        title:"Highly Skilled Employees",
     },
 ]
 
@@ -132,31 +123,7 @@ const CounterData05 = [
         title:"Happy clients",
         content:"We love clients",
     },
-    const CounterData05 = [
-        {
-            number:{
-                text: "1227",
-                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
-            },
-            title:"Winning awards",
-            content:"For creative design",
-        },
-        {
-            number:{
-                text: "1947",
-                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
-            },
-            title:"Working hours",
-            content:"Desperate for work",
-        },
-        {
-            number:{
-                text: "1587",
-                class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
-            },
-            title:"Happy clients",
-            content:"We love clients",
-        },
+    
 ]
 
 
