@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const {json} = require('body-parser')
+//const {json} = require('body-parser')
 
 const PayRoll = require('../../models/payroll');
 
@@ -64,7 +64,7 @@ router.post('/insert-payroll', async (req, res) => {
 
 });
 
-router.put('/update-payroll/:id'), async (req, res) => {
+router.put('/update-payroll/:id', async (req, res) => {
 
   try {
 
@@ -89,7 +89,7 @@ router.put('/update-payroll/:id'), async (req, res) => {
     res.status(500).json({ error: error.message });
 }
 
-};
+});
 
 router.delete('/delete-payroll/:id', async (req, res) => {
 
@@ -118,41 +118,3 @@ router.delete('/delete-payroll/:id', async (req, res) => {
 });
 
 module.exports = router;
-
-/*
-
-const knex = require('../data/dbConfig');
-
-function getAllPayRoll() {
-
-  return knex('payroll').select('*');
-
-}
-
-function findPayRollById(id) {
-
-  return knex('payroll').select('*').where({ id }).first();
-
-}
-
-function insertPayRoll(pay) {
-
-  return knex('payroll').insert(PayRoll);
-
-}
-
-function updatePayRoll(id, PayRoll) {
-
-  return knex('payroll').where({ id }).update(PayRoll);
-
-}
-
-function deletePayRoll(id) {
-
-  return knex('payroll').where({ id }).del();
-
-}
-
-
-
-
