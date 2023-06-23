@@ -1,29 +1,32 @@
-const knex =require('../data/dbConfig')
+const knex = require('./../data/dbConfig');
 
-async function getAllCompanyUsers() {
-    return await knex('company_user').select('*')
+
+function getAllCompanyUsers() {
+  //console.log('Knex variable:', knex);
+  return knex('company_user').select('*');
 }
+
 
 async function findCompanyUserById(id) {
     return await knex('company_user').select('*').where({company_user_id: id}).first()
 }
 
-async function insertCompanyUser(company_user) {
-    return await knex('company_user').insert(company_user)
+function insertCompanyUser(company_user) {
+  return knex('company_user').insert(company_user);
 }
 
-async function updateCompanyUser(id, company_user) {
-    return await knex(company_user).where({id: id}).update(company_user)
+function updateCompanyUser(id, company_user) {
+  return knex('company_user').where({ id }).update(company_user);
 }
 
-async function deleteCompanyUser(id) {
-    return await knex('company_user').where({id: id}).del()
+function deleteCompanyUser(id) {
+  return knex('company_user').where({ id }).del();
 }
 
-module.export = {
-    getAllCompanyUsers,
-    findCompanyUserById,
-    insertCompanyUser,
-    updateCompanyUser,
-    deleteCompanyUser
-}
+module.exports = {
+  getAllCompanyUsers,
+  findCompanyUserById,
+  insertCompanyUser,
+  updateCompanyUser,
+  deleteCompanyUser
+};

@@ -1,69 +1,68 @@
-const router = require('express').Router()
-const { json } = require('body-parser')
+const express = require('express');
+const router = express.Router();
+const { json } = require('body-parser');
+const CompanyUser = require('../../models/company_user_model');
 
-const Company_user = require('../../models/company_user_model')
 
-router.get('/getcompanyusers/', (req, res) => {
-    Company_user.getAllCompanyUser()
-    .then(company_user => {
-        res.json(company_user)
-    })
-    .catch(err => res.send(err))
-})
+router.get('/get-company-users', async (req, res) => {
+  try {
+    const companyUsers = await CompanyUser.getAllCompanyUsers();
+    res.json(companyUsers);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.get('/getcompanyuser/:id', (req, res) => {
-    const { id } = req.params
-    Company_user.findCompanyUserById(id)
-    .then(company_user => {
-        if(company_user) {
-            res.status(200).json(company_user)
-        }
-        else {
-            res.status(400).json({message: 'company user by that id not found'})
-        }
-    }) 
-})
+router.get('/get-company-user/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const companyUser = await CompanyUser.findCompanyUserById(id);
+    if (companyUser) {
+      res.json(companyUser);
+    } else {
+      res.status(404).json({ message: 'Company user by that id not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.post('/insertcompanyuser/:', (req, res) => {
-    req.body.company_user_id = req.params.id
-    Company_user.insertCompanyUser(req.body)
-    .then(e => {
-        res.status(201).json({message: 'company user created'})
-    })
-    .catch(err => {
-        res.status(500).json({...err, message: 'failed to create company user' })
-    })
-})
+router.post('/insert-company-user', async (req, res) => {
+  try {
+    await CompanyUser.insertCompanyUser(req.body);
+    res.status(201).json({ message: 'Company user created' });
+  } catch (error) {
+    res.status(500).json({ error: error.message, message: 'Failed to create company user' });
+  }
+});
 
-router.put('/updatecompanyuser/:id', (req, res) => {
-    Company_user.updateCompanyUser(req.body, req.params.id)
-    .then(updateUser => {
-        if(!updateUser) {
-            res.status(404).json({ message: 'No company user by that id exist'})
-        } else {
-            Company_user.findCompanyUserById(req.params.id)
-            .then(CompanyUser => {
-               res.status() 
-            })
-        }
-})
- .catch(err => {
-    res.status(500).json(err)
- }) 
-})
+router.put('/update-company-user/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedUser = await CompanyUser.updateCompanyUser(req.body, id);
+    if (!updatedUser) {
+      res.status(404).json({ message: 'No company user by that id exists' });
+    } else {
+      const companyUser = await CompanyUser.findCompanyUserById(id);
+      res.json(companyUser);
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-router.delete('/deletecompanyuser/:id', (req,res) => {
-    Company_user.deleteCompanyUser(req.params.id)
-    .then(user =>  {
-        if(!user)  {
-            res.status(400).json({message: 'No company user by that id exist'})
-        } else {
-            res.status(200).json({ message: 'Company user deleted'})
-        }
-    })
-    .catch(err => {
-        res.status(500).json(err)
-    })
-})
+router.delete('/delete-company-user/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedUser = await CompanyUser.deleteCompanyUser(id);
+    if (!deletedUser) {
+      res.status(404).json({ message: 'No company user by that id exists' });
+    } else {
+      res.json({ message: 'Company user deleted' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;
