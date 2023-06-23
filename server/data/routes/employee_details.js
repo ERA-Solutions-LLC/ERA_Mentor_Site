@@ -3,7 +3,7 @@ const { json } = require('body-parser')
 
 const Employee_details = require('../../models/employee_details')
 
-router.get('/getemployeedetails/', (req, res) => {
+router.get('/employee-details/', (req, res) => {
     Employee_details.getAllEmployeeDetails()
     .then(employee_details => {
         res.json(employee_details)
@@ -11,7 +11,7 @@ router.get('/getemployeedetails/', (req, res) => {
     .catch(err => res.send(err))
 })
 
-router.get('/getemployeedetails/:id', (req, res) => {
+router.get('/employee-details/:id', (req, res) => {
     const { id } = req.params
     Employee_details.findEmployeeDetailsById(id)
     .then(employee_details => {

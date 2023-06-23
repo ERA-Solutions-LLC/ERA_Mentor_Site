@@ -155,23 +155,19 @@ const WhoWeArePage = (props) => {
       {/* Header End */}
       <SideButtons />
       {/* Background video section start */}
-      <section className="pb-0 h-[700px] md:h-[550px] sm:h-[350px] relative overflow-hidden">
-        <Videos
-          className="py-[160px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] md:h-[550px] sm:h-[350px]"
-          src="video path"
-          loop={true}
-          poster={TeamImg2}
-          opacity={0.5}>
-          <Container className="bg-cover h-full">
+      <section className="pb-0 bg-cover h-[700px] md:h-[550px] sm:h-[350px] relative overflow-hidden" style={{ backgroundImage: `url(${TeamImg2})`}}>
+        <section className='h-full w-full backdrop-brightness-50' 
+          >
+          <Container className="bg-cover w-full h-full backdrop-brightness-50">
             <Row className="items-end justify-center h-full">
               <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">
-                <span className="mb-[5px] text-lg font-serif text-slate-50 bg-black opacity-60 block xs:mb-[15px]">Helping Veterans and Businesses at the same time</span>
-                <h1 className="text-slate-50 bg-black opacity-60 font-serif font-medium text-[42px] leading-[49px] mb-20 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[30px] xs:leading-[40px]">About Era Solutions </h1>
+                <h1 className="text-white font-serif font-medium text-[42px] leading-[49px] mb-4 sm:mb-12 sm:text-[30px] sm:leading-[40px] xs:text-[30px] xs:leading-[40px]">About Era Solutions </h1>
+                <span className="mb-[5px] text-lg font-serif text-white block xs:mb-[15px]">Helping Veterans and Businesses at the same time</span>
                 <span className="h-[80px] inline-block bg-white mb-20 sm:mb-12 sm:h-[50px]"></span>
               </Col>
             </Row>
           </Container>
-        </Videos>
+        </section>
         {/* Background video section end */}
       </section>
       {/* Background video section end */}

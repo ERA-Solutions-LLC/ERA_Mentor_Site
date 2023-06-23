@@ -119,7 +119,7 @@ const ProgressBarData = [
     value: "20",
   },
   {
-    title: "Research",
+    title: "Audio",
     value: "20",
   },
 
@@ -352,18 +352,20 @@ const AboutMePage = (props) => {
       {/* Header End */}
       <SideButtons />
       {/* Section Start */}
-      <section className="p-0 bg-cover bg-center relative" style={{ backgroundImage: "url(" + Smile + ")", opacity: '0.9' }}>
+      <section className="p-0 bg-cover bg-center relative" style={{ backgroundImage: `url(${Smile})`}}>
+      <section className='h-full w-full backdrop-brightness-50' >
       <Container className="relative h-[800px] md:h-[600px] sm:h-[400px]">
       <Row className="items-center h-full md:pb-40 sm:pb-0">
         <Col className="d-flex justify-content-center align-items-center">
           <div className="text-center">
-            <h2 className="text-slate-50 bg-black opacity-60  font-serif -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center" style={{color: '#778899'}}>We Offer Training </h2>
-            <p className="text-slate-50 bg-black opacity-60  font-serif leading-[30px] text-xmd mb-10 block xs:mx-auto xs:text-center" style={{fontSize: 22, color: '#778899', fontWeight: '500'}}>From software certifications to broadband certifications, We have you covered.</p>
+            <h2 className="text-white shadow-2xl font-serif -tracking-[1px] mb-[40px] xs:mb-[25px] font-medium xs:text-center">We Offer Training </h2>
+            <p className="text-white font-serif leading-[30px] text-xmd mb-10 block xs:mx-auto xs:text-center" >From software certifications to broadband certifications, We have you covered.</p>
           </div>
         </Col>
       </Row>
     </Container>
       </section>
+    </section>
       {/* Section End */}
 
       {/* Section Start */}
