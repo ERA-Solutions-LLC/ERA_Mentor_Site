@@ -5,7 +5,7 @@ async function getAllCompanyUsers() {
 }
 
 async function findCompanyUserById(id) {
-    return await knex('company_user').select('*').where({id: company_user_id}).first()
+    return await knex('company_user').select('*').where({company_user_id: id}).first()
 }
 
 async function insertCompanyUser(company_user) {

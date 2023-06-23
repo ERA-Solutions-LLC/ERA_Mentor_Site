@@ -15,6 +15,8 @@ import { resetForm, sendEmail } from "../../../Functions/Utilities";
 import { Input } from '../../../Components/Form/Form'
 import FooterMenu, { Footer } from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
+import Counter from '../../../Components/Counters/Counter'
+import { CounterData01 } from '../../../Components/Counters/CounterData';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -61,19 +63,19 @@ const blogMasonryData = blogData.filter((item) => item.blogType === "masonry").f
 
 const iconWithTextData = [
   {
-    icon: "line-icon-Cursor-Click2 text-[#27ae60]",
-    title: "We Help Businesses to Transform Their Employing Habits into the Ever-Evolving Digital Era.",
-    content: "Providing platform opportunities",
+    icon: "line-icon-Cursor-Click2 text-erablue",
+    title: "Unlocking Potential, Empowering Businesses:",
+    content: "Your Talent Management Experts.",
   },
   {
-    icon: "line-icon-Bakelite text-[#27ae60]",
-    title: "Building a Strong workforce for Your Business by Offering Cost-Effective Solutions",
-    content: "Advanced technology that simplifies hiring ensures successful hires",
+    icon: "line-icon-Bakelite text-erablue",
+    title: "Navigating Growth, Maximizing Success:",
+    content: "Your Trusted Consulting Partner for Businesses",
   },
   {
-    icon: "line-icon-Boy text-[#27ae60]",
-    title: "We Offer Business A Range of Human Resource Solutions To Help Them Find And Hire Top Military Talent",
-    content: "Committed to providing top-notch leads and employees",
+    icon: "line-icon-Boy text-erablue",
+    title: "Transforming Talent into Triumph:",
+    content: "Elevate Your Business with Our Expert Consulting and Management Services.",
   },
 ]
 
@@ -198,38 +200,29 @@ const HomeStartupPage = (props) => {
       {/* Section End */}
 
       {/* Section Start */}
-      <section className="bg-cover bg-center pb-[200px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext" style={{ backgroundColor: "lightgray" }}>
+      <section className="bg-cover bg-center pb-[200px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
             <Overlap className="md:mt-0">
               <Row className="justify-center">
                 <Col xs={12} sm={9} lg={12} md={12}>
-                  <IconWithText grid="row-cols-1 row-cols-lg-3 row-cols-md-2 justify-center gap-y-10 z-10 relative" className="rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
+                  <IconWithText grid="row-cols-4 row-cols-lg-3 row-cols-md-4 justify-center gap-y-10 z-10 relative" className=" text-black rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
                 </Col>
               </Row>
             </Overlap>
           </div>
           <Row className="items-end overflow-hidden">
-            <m.div className="col-12 col-lg-3 col-md-6 order-1 text-right md:mb-[50px] md:text-center" {...fadeInRight}>
-              <div className="text-[70px] text-erablue font-serif leading-[70px] tracking-[-3px] font-semibold">10+</div>
-              <span className="font-serif text-erablue font-medium uppercase tracking-[2px] block mb-[15px] sm:mb-[5px]">Training Programs</span>
-              <p className="w-[90%] inline-block sm:w-[60%] xs:w-full"></p>
-            </m.div>
-            <m.div className="col col-lg-6 order-lg-2 order-3 z-0 py-[10px]" {...{ ...fadeIn, transition: { duration: 0.6 } }}>
-              <TiltBox>
-                <h1
-                  className="title cover-background inline-block font-serif mb-0 uppercase bg-erablue font-semibold tracking-[-10px] text-[300px] lg:text-[300px] leading-[260px] xs:text-[160px] xs:leading-[150px]"
-                  style={{ backgroundColor: "#3975f6" }}>
-                  20
-                </h1>
-                <span className="font-serif text-xlg text-erablue tracking-[4px] font-semibold uppercase block xs:text-md">Years of experience</span>
-              </TiltBox>
-            </m.div>
-            <m.div className="col-12 col-lg-3 col-md-6 order-2 md:mb-[50px] md:text-center" {...fadeInLeft}>
-              <div className="text-[70px] text-erablue font-serif leading-[70px] tracking-[-3px] font-semibold">20+</div>
-              <span className="font-serif text-erablue font-medium uppercase tracking-[2px] block mb-[15px] sm:mb-[5px]">Highly skilled employees</span>
-              <p className="w-[90%] inline-block sm:w-[60%] xs:w-full"></p>
-            </m.div>
+          <Counter
+        as="h5"
+        theme="counter-style-01"
+        grid="row-cols-1 row-cols-md-3 row-cols-sm-2"
+        className="text-erablue "
+        duration={7}
+        data={CounterData01}
+        postfix_sign="+"
+        animation={fadeIn}
+        animationDelay={0.2}
+/>
           </Row>
         </Container>
       </section>
