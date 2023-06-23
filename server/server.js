@@ -23,9 +23,9 @@ const mailRoutes = require('./mail')
 
 const contactFormRoutes = require('./data/routes/contact_form_route')
 
-const payRollRoutes = require('./data/routes/pay_roll')
+const payRollRoutes = require('./data/routes/payroll_routes')
 
-const JobTraining = require('./data/routes/JobTraining')
+const jobTrainingRoutes = require('./data/routes/job_training')
 
 const leaveTimeRoutes = require('./data/routes/leave_time_route')
 

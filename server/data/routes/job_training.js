@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {json} = require('body-parser')
 
-const JobTraining = require('../../models/job_training');
+const JobTraining = require('../../models/job_training_models');
 
 
 
