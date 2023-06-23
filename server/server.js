@@ -36,7 +36,7 @@ server.use('/mail', mailRoutes)
 
 server.use('/contact-form', contactFormRoutes)
 
-server.use('/leave_time', leaveTimeRoutes)
+server.use('/leave-time', leaveTimeRoutes)
 
 
 

@@ -1,6 +1,8 @@
-const knex = require('../data/dbConfig');
+const knex = require('./../data/dbConfig');
+
 
 function getAllCompanyUsers() {
+  //console.log('Knex variable:', knex);
   return knex('company_user').select('*');
 }
 

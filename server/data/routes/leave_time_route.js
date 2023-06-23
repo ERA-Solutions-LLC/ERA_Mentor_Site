@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {json} = require('body-parser')
-const LeaveTime = require('../../models/leave_time_model');
+const LeaveTime = require('../../models/leave_time');
 
 router.get('/leave-time', async (req, res) => {
   try {

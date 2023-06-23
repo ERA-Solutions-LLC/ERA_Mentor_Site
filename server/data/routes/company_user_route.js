@@ -3,16 +3,17 @@ const router = express.Router();
 const { json } = require('body-parser');
 const CompanyUser = require('../../models/company_user_model');
 
-router.get('/getcompanyusers', async (req, res) => {
+
+router.get('/get-company-users', async (req, res) => {
   try {
-    const companyUsers = await CompanyUser.getAllCompanyUser();
+    const companyUsers = await CompanyUser.getAllCompanyUsers();
     res.json(companyUsers);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-router.get('/getcompanyuser/:id', async (req, res) => {
+router.get('/get-company-user/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const companyUser = await CompanyUser.findCompanyUserById(id);
@@ -26,7 +27,7 @@ router.get('/getcompanyuser/:id', async (req, res) => {
   }
 });
 
-router.post('/insertcompanyuser', async (req, res) => {
+router.post('/insert-company-user', async (req, res) => {
   try {
     await CompanyUser.insertCompanyUser(req.body);
     res.status(201).json({ message: 'Company user created' });
@@ -35,7 +36,7 @@ router.post('/insertcompanyuser', async (req, res) => {
   }
 });
 
-router.put('/updatecompanyuser/:id', async (req, res) => {
+router.put('/update-company-user/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedUser = await CompanyUser.updateCompanyUser(req.body, id);
@@ -50,7 +51,7 @@ router.put('/updatecompanyuser/:id', async (req, res) => {
   }
 });
 
-router.delete('/deletecompanyuser/:id', async (req, res) => {
+router.delete('/delete-company-user/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedUser = await CompanyUser.deleteCompanyUser(id);
