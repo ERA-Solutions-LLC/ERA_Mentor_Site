@@ -27,6 +27,8 @@ const payRollRoutes = require('./data/routes/pay_roll')
 
 const JobTraining = require('./data/routes/JobTraining')
 
+const leaveTimeRoutes = require('./data/routes/leave_time_route')
+
 //include all route paths and point to the files defining routes
 
 server.use('/employee-details', employeeDetailsRoutes)
@@ -38,6 +40,8 @@ server.use('/mail', mailRoutes)
 server.use('/contact-form', contactFormRoutes)
 
 server.use('/payroll', payRollRoutes)
+
+server.use('/leave-time', leaveTimeRoutes)
 
 server.use('/job_training', jobTrainingRoutes)
 

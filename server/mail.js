@@ -33,7 +33,7 @@ router.get('/test', (req, res) => {
 router.post("/send", (req, res) => {
     const { email, name, phone, comment } = req.body
 
-
+    console.log("email", email, "Phone", phone, "name", name, "comment",comment)
     // Contact Form Email Template
     if ( name !== undefined ) {
         var mailConfig = {

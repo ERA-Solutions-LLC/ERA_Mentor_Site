@@ -1,29 +1,29 @@
-const knex =require('../data/dbConfig')
+const knex = require('../data/dbConfig');
 
-async function getAllContactForm() {
-    return await knex('contact_form').select('*')
+function getAllContactForm() {
+  return knex('contact_form').select('*');
 }
 
-async function findContactFormById(id) {
-    return await knex('contact_form').select('*').where({id: client_id}).first()
+function findContactFormById(id) {
+  return knex('contact_form').select('*').where({ id }).first();
 }
 
-async function insertContactForm(contact_form) {
-    return await knex('contact_form').insert(contact_form)
+function insertContactForm(contact_form) {
+  return knex('contact_form').insert(contact_form);
 }
 
-async function updateContactForm(id, contact_form) {
-    return await knex(contact_form).where({id: id}).update(contact_form)
+function updateContactForm(id, contact_form) {
+  return knex('contact_form').where({ id }).update(contact_form);
 }
 
-async function deleteContactForm(id) {
-    return await knex('contact_form').where({id: id}).del()
+function deleteContactForm(id) {
+  return knex('contact_form').where({ id }).del();
 }
 
-module.export = {
-    getAllContactForm,
-    findContactFormById,
-    insertContactForm,
-    updateContactForm,
-    deleteContactForm
-}
+module.exports = {
+  getAllContactForm,
+  findContactFormById,
+  insertContactForm,
+  updateContactForm,
+  deleteContactForm
+};

@@ -5,8 +5,9 @@
 exports.up = function(knex) {
     return knex.schema.createTable('payroll', table => {
         table.increments('pr_id').primary()
-    
-        table.integer('pr_user_id').unsigned
+
+        table.integer('pr_user_id').unsigned()
+
         
         table.decimal('pr_work_hours',4).notNullable()
     
@@ -32,5 +33,6 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+  return knex.schema.dropTableIfExists('payroll') 
+
 };

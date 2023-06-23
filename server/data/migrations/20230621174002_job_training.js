@@ -3,10 +3,11 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-    return knex.schema.createTable('job_seeking', table => {
+
+    return knex.schema.createTable('job_training', table => {
         table.increments('jt_id').primary()
     
-        table.integer('jt_user_id').unsigned
+        table.integer('jt_user_id').unsigned()
         
         table.string('jt_courses', 500).notNullable()
     
@@ -22,5 +23,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+  return knex.schema.dropTableIfExists('job_training')   
 };

@@ -1,29 +1,29 @@
-const knex =require('../data/dbConfig')
+const knex = require('../data/dbConfig');
 
-async function getAllEmployeeDetails() {
-    return await knex('employee_details').select('*')
+function getAllEmployeeDetails() {
+  return knex('employee_details').select('*');
 }
 
-async function findEmployeeDetailsById(id) {
-    return await knex('employee_details').select('*').where({id: ed_id}).first()
+function findEmployeeDetailsById(id) {
+  return knex('employee_details').select('*').where({ id }).first();
 }
 
-async function insertEmployeeDetails(employee_details) {
-    return await knex('employee_details').insert(employee_details)
+function insertEmployeeDetails(employee_details) {
+  return knex('employee_details').insert(employee_details);
 }
 
-async function updateEmployeeDetails(id, employee_details) {
-    return await knex(employee_details).where({id: id}).update(employee_details)
+function updateEmployeeDetails(id, employee_details) {
+  return knex('employee_details').where({ id }).update(employee_details);
 }
 
-async function deleteEmployeeDetails(id) {
-    return await knex('employee_details').where({id: id}).del()
+function deleteEmployeeDetails(id) {
+  return knex('employee_details').where({ id }).del();
 }
 
-module.export = {
-    getAllEmployeeDetails,
-    findEmployeeDetailsById,
-    insertEmployeeDetails,
-    updateEmployeeDetails,
-    deleteEmployeeDetails
-}
+module.exports = {
+  getAllEmployeeDetails,
+  findEmployeeDetailsById,
+  insertEmployeeDetails,
+  updateEmployeeDetails,
+  deleteEmployeeDetails
+};

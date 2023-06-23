@@ -7,8 +7,9 @@ exports.up = function(knex) {
         table.increments('js_id').primary()
     
         //I comment out the bottom column until i understand how to use FK references
+
         table.integer('js_user_id').unsigned()
-        
+
         //table.foreign('js_user_id').references('ed_user_id.employee_details')
     
         table.string('js_available_jobs', 255).notNullable()
