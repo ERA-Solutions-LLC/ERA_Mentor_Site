@@ -341,7 +341,7 @@ const OurTeamPage = (props) => {
               <TiltBox>
                 <div className="mb-[20px] block"><span className="font-serif font-medium text-white uppercase tracking-[1px] text-sm bg-darkgray inline-block px-[20px] py-[5px]">We are Era Solutions. A highly creative team</span></div>
                 <span className="font-serif title cover-background font-bold text-center text-[230px] leading-[230px] -tracking-[5px] uppercase bg-darkgray lg:text-[170px] lg:leading-[170px] md:text-[130px] md:leading-[130px] sm:text-[100px] sm:leading-[100px] xs:text-[55px] xs:leading-[55px] xs:-tracking-[1px]"
-                   >Together
+                   >WE ADVANCE, GROW, AND CULTIVATE TOGETHER
                 </span>
               </TiltBox>
             </Col>
