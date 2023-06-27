@@ -4,9 +4,9 @@ const router = express.Router();
 
 //const {json} = require('body-parser')
 
-const PayRoll = require('../../models/payroll');
+const PayRoll = require('../../models/payroll_model');
 
-router.get('/leave-time', async (req, res) => {
+router.get('/payroll', async (req, res) => {
 
   try {
 

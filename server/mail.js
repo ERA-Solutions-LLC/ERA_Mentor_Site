@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.REACT_APP_SMTP_PASS
     }
 })
-
+console.log(transporter.toString)
 // Verify nodemailer configuration
 transporter.verify((err, success) => {
     if (err) {
@@ -35,8 +35,11 @@ router.post("/send", (req, res) => {
 
     console.log("email", email, "Phone", phone, "name", name, "comment",comment)
     // Contact Form Email Template
+   // console.log(transporter.REACT_APP_SMTP_HOST)
+    let mailConfig ={};
     if ( name !== undefined ) {
-        var mailConfig = {
+        console.log('name is define')
+        mailConfig = {
             from: process.env.REACT_APP_SMTP_EMAIL,
             to: "support@erasolutions.us",
             subject: name,
@@ -72,11 +75,13 @@ router.post("/send", (req, res) => {
             </table>
             </body>
             </html>`
-        }
+        };
+        //console.log(mailConfig)
+        
     } else {
 
         // Newsletter Form Email Template
-        var mailConfig = {
+        mailConfig = {
             from: process.env.REACT_APP_SMTP_EMAIL,
             to: email,
             subject: name,
