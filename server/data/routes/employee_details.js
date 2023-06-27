@@ -3,7 +3,7 @@ const router = express.Router();
 const { json } = require('body-parser');
 const EmployeeDetails = require('../../models/employee_details');
 
-router.get('/getemployeedetails', async (req, res) => {
+router.get('/get-employee-details', async (req, res) => {
   try {
     const employeeDetails = await EmployeeDetails.getAllEmployeeDetails();
     res.json(employeeDetails);
@@ -34,7 +34,7 @@ router.get('/employee-details/:id', (req, res) => {
 })
 
 
-router.put('/updateemployeedetails/:id', async (req, res) => {
+router.put('/update-employee-details/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedDetails = await EmployeeDetails.updateEmployeeDetails(req.body, id);
@@ -49,7 +49,7 @@ router.put('/updateemployeedetails/:id', async (req, res) => {
   }
 });
 
-router.delete('/deleteemployeedetails/:id', async (req, res) => {
+router.delete('/delete-employee-details/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedDetails = await EmployeeDetails.deleteEmployeeDetails(id);

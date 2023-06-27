@@ -12,7 +12,7 @@ exports.up = function(knex) {
     
         table.decimal('pr_hourly_rate', 4).notNullable()
     
-        table.decimal('pr_contrat_pay', 6).notNullable()
+        table.decimal('pr_contract_pay', 6).notNullable()
 
         table.string('pr_banking_name', 30).notNullable()
 
