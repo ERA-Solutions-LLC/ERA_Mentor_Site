@@ -51,7 +51,7 @@ router.get('/job-training/:id', async (req, res) => {
 
 });
 
-router.post('/insert-job_training'), async (req, res) => {
+router.post('/insert-job_training', async (req, res) => {
 
   try {
 
@@ -65,7 +65,7 @@ router.post('/insert-job_training'), async (req, res) => {
 
   }
 
-};
+});
 
 router.put('/update-job_training/:id', async (req, res) => {
 

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { json } = require('body-parser');
 
-const Payroll = require('../../models/payroll_model');
+const payRollRoutes = require('../../models/payroll_model');
 
 router.get('/payroll/', async (req, res) => {
   try {
