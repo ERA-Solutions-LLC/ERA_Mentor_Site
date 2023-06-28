@@ -253,7 +253,7 @@ const WhoWeArePage = (props) => {
       {/* Section End */}
 
       {/* Parallax Scrolling Start */}
-      <div className="py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px] overflow-hidden relative">
+      {/* <div className="py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px] overflow-hidden relative">
         <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[0px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]}></Parallax>
         <div className="absolute h-full w-full opacity-80 top-0 left-0" style={{ backgroundColor: "#3975f6" }}></div>
         <Container>
@@ -274,7 +274,7 @@ const WhoWeArePage = (props) => {
               animationDelay={0.1} />
           </Row>
         </Container>
-      </div>
+      </div> */}
       {/* Parallax Scrolling End */}
 
       {/* Section Start */}
