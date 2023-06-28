@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-//const {json} = require('body-parser')
+const {json} = require('body-parser')
 
 const PayRoll = require('../../models/payroll_model');
 
@@ -10,9 +10,9 @@ router.get('/payroll', async (req, res) => {
 
   try {
 
-    const PayRoll = await PayRoll.getAllPayRoll();
+    const payRoll = await PayRoll.getAllPayroll();
 
-    res.json(PayRoll);
+    res.json(payRoll);
 
   } catch (error) {
 
@@ -28,11 +28,11 @@ router.get('/payroll/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const PayRoll = await PayRoll.findLeaveTimeById(id);
+    const payRoll = await PayRoll.findLeaveTimeById(id);
 
-    if (PayRoll) {
+    if (payRoll) {
 
-      res.json(PayRoll);
+      res.json(payRoll);
 
     } else {
 
@@ -70,13 +70,13 @@ router.put('/update-payroll/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const updatedPayRoll = await PayRoll.updateLeaveTime(req.body, id);
+    const updatedPayRoll = await PayRoll.updatedPayRoll(req.body, id);
 
     if (updatedPayRoll) {
 
-      const PayRoll = await PayRoll.findPayRollById(id);
+      const payRoll = await PayRoll.findPayRollById(id);
 
-      res.json(PayRoll);
+      res.json(payRoll);
 
     } else {
 

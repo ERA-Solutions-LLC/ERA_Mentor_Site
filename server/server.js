@@ -31,7 +31,7 @@ const leaveTimeRoutes = require('./data/routes/leave_time_route')
 
 //include all route paths and point to the files defining routes
 
-server.use('/', employeeDetailsRoutes)
+server.use('/employee-details', employeeDetailsRoutes)
 
 server.use('/company-user', companyUserRoutes)
 
@@ -43,7 +43,7 @@ server.use('/payroll', payRollRoutes)
 
 server.use('/leave-time', leaveTimeRoutes)
 
-server.use('/job_training', jobTrainingRoutes)
+server.use('/job-training', jobTrainingRoutes)
 
 
 server.listen(PORT, () =>{
