@@ -1,6 +1,6 @@
 // Import Imgs
-import Advisor from '../../Assets/img/Ta.jpg'
-import TA from '../../Assets/img/dev2.jpg'
+import Advisor from '../../Assets/img/Advisor.png'
+import TA from '../../Assets/img/TeamImg4.png'
 import JrDev from '../../Assets/img/ItCollab.png'
 
 const InteractiveBannersData01 = [
