@@ -177,8 +177,8 @@ const WhoWeArePage = (props) => {
         <Container>
           <Row className="items-center">
             <Col xl={5} lg={6} className="pb-12 lg:pb-28 sm:pb-[50px]">
-              <div className="text-xmd mb-[20px] font-serif">Comprehensive support you and your company can trust</div>
-              <h5 className="font-serif text-darkgray font-medium mb-[5.5rem]">Our team has a well-deserved reputation of excellence in providing smart, sensible, and cost-effective business solutions for our clients.</h5>
+              
+            <h5 className="font-serif text-darkgray font-medium mb-[5.5rem] text-lg text-justify leading-relaxed">Era Solutions is a Service-Disabled Veteran Owned Small Business (SDVOSB) whose mission is to train and employ veterans and place them in highly sought careers, while providing HR and talent management solutions to business. We support the Department of Labor (DOL) through the Registered Apprenticeship Program, and we aid in veteran employment through the Army CareerSkills program and the DOD SkillBridge program. Era Solutions was founded in 2015 with offices in Oklahoma, Texas and California. The Company has employees located across the nation as well as in Europe and Asia to support our mission to connect veterans to training resulting in successful careers in the civilian sector.</h5>
               <Row>
                 <Col>
                   <div className="flex">

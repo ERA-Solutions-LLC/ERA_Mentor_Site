@@ -289,6 +289,7 @@ const ERAWhoWeAre = lazy(() => import("./Pages/Home/Startup/ERAWhoWeArePage"))
 const ERAUpskills = lazy(() => import("./Pages/Home/Startup/ERAUpskillsPage"))
 const ERAHome = lazy(() => import("./Pages/Home/Startup/ERAHome"))
 const ERAOurTeamPage = lazy(() => import("./Pages/Home/Startup/ERAOurTeamPage"))
+const EraLoginForm = lazy(() => import("./Pages/Home/Startup/EraLoginForm"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -417,6 +418,7 @@ function App() {
                   <Route path="/contact" element={<ERAContactUs/>} />
                   <Route path="/upskill" element={<ERAUpskills/>} />
                   <Route path="/careers" element={<ERAOurTeamPage/>} />
+                  <Route path="/login" element={<EraLoginForm/>} />
 
                   {/* Home Specialized */}
                   <Route path="/home-restaurant" element={<RestaurantPage />} />
