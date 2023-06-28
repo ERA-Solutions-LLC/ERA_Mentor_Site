@@ -341,7 +341,7 @@ const OurTeamPage = (props) => {
               <TiltBox>
                 <div className="mb-[20px] block"><span className="font-serif font-medium text-white uppercase tracking-[1px] text-sm bg-darkgray inline-block px-[20px] py-[5px]">We are Era Solutions. A highly creative team</span></div>
                 <span className="font-serif title cover-background font-bold text-center text-[230px] leading-[230px] -tracking-[5px] uppercase bg-darkgray lg:text-[170px] lg:leading-[170px] md:text-[130px] md:leading-[130px] sm:text-[100px] sm:leading-[100px] xs:text-[55px] xs:leading-[55px] xs:-tracking-[1px]"
-                   >Together
+                   >WE ADVANCE, GROW, AND CULTIVATE TOGETHER
                 </span>
               </TiltBox>
             </Col>
@@ -491,8 +491,9 @@ const OurTeamPage = (props) => {
         <Container>
           <m.div className="row justify-center" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
             <Col lg={5} sm={7} className="col-12 text-center mb-20 sm:mb-12">
-              <span className="font-serif font-medium text-fastblue block mb-[15px]">Open positions</span>
-              <h5 className="font-serif font-medium text-darkgray inline-block -tracking-[.5px]">We talk a lot about hope, helping, and teamwork</h5>
+              <span className="font-serif font-medium text-fastblue block mb-[15px]">Ready to jump-start your career?</span>
+              <h5 className="font-serif font-medium text-darkgray inline-block -tracking-[.5px]">If you’re looking for rapid career growth and a positive, encouraging work enviroment, come join us! We are one of the fastest growing companies, who want to advance their careers while helping America’s service members, veterans, and military spouses.
+</h5>
             </Col>
           </m.div>
           <Row className="justify-center">
