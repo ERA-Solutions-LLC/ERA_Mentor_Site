@@ -43,7 +43,7 @@ server.use('/payroll', payRollRoutes)
 
 server.use('/leave-time', leaveTimeRoutes)
 
-server.use('/job_training', jobTrainingRoutes)
+server.use('/job-training', jobTrainingRoutes)
 
 
 server.listen(PORT, () =>{
