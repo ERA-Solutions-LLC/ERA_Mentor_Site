@@ -203,10 +203,10 @@ const HomeStartupPage = (props) => {
       <section className="bg-cover bg-center pb-[200px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
-            <Overlap className="md:mt-0">
+            <Overlap className="md:mt-0 xs:hidden">
               <Row className="justify-center">
-                <Col xs={12} sm={9} lg={12} md={12}>
-                  <IconWithText grid="row-cols-4 row-cols-lg-3 row-cols-md-4 justify-center gap-y-10 z-10 relative" className=" text-black rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
+                <Col xs={7} sm={9} lg={12} md={12}>
+                  <IconWithText grid="row-cols-3 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 row-cols-xs-1 row-cols-xxs-1    justify-center gap-y-12 z-13 relative" className=" text-black mt-17px rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
                 </Col>
               </Row>
             </Overlap>
@@ -243,25 +243,7 @@ const HomeStartupPage = (props) => {
         {/* Section Start */}
         <section className="mt-5 pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
           <Container>
-            <m.div className="row justify-center" {...fadeIn}>
-              <Col lg={5} sm={9} className="md:text-center md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
-                <h2 className="heading-5 font-serif leading-[3rem] text-darkgray font-semibold w-[85%] lg:w-full">From service to success, we empower veterans with specialize training and job placement support</h2>
-              </Col>
-              <Col lg={{ span: 6, offset: 1 }}>
-                <Row sm={2} xs={1} className="gap-y-10">
-                  <Col className="xs:text-center">
-                    <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Hiring</span>
-                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personnel.</p>
-                  </Col>
-                  <Col className="xs:text-center">
-                    <div className="">
-                      <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Training</span>
-                      <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Online courses and certifications keeping up with the latest technologies and practices.</p>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </m.div>
+            
           {/* COMMENTED OUT FOR NOW <Row>
               <m.div className="col mt-32 w-full md:mt-24 home-startup-interactivebanner" {...fadeIn}>
                 <InteractiveBanners02
@@ -302,12 +284,12 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] overflow-hidden startup-processstep">
+        <section className="py-[75px] lg:py-[30px] md:py-[25px] sm:py-[20px] overflow-hidden startup-processstep">
           <Container>
             <Row className="items-center justify-center">
               <Col xl={5} lg={6} md={10}>
                 <span className="font-serif text-xmd font-medium text-erablue inline-block mb-[20px] sm:mb-[10px]">Business process</span>
-                <h2 className="heading-5 font-serif font-semibold text-darkgray block -tracking-[.5px] mb-20 w-[85%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
+                <h2 className="heading-5 font-serif font-semibold text-darkgray text-lg leading-relaxed -tracking-[.5px] mb-20 w-[90%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
                 <ProcessStep grid="row-cols-1" theme='process-step-style-02' data={ProcessStepData} animation={fadeIn} />
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>
