@@ -203,10 +203,10 @@ const HomeStartupPage = (props) => {
       <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
-            <Overlap className="md:mt-0">
+            <Overlap className="md:mt-0 xs:hidden">
               <Row className="justify-center">
-                <Col xs={12} sm={9} lg={12} md={12}>
-                  <IconWithText grid="row-cols-4 row-cols-lg-3 row-cols-md-4 justify-center gap-y-10 z-10 relative" className=" text-black rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
+                <Col xs={7} sm={9} lg={12} md={12}>
+                  <IconWithText grid="row-cols-3 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 row-cols-xs-1 row-cols-xxs-1    justify-center gap-y-12 z-13 relative" className=" text-black mt-17px rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
                 </Col>
               </Row>
             </Overlap>
@@ -241,6 +241,32 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
+
+        <section className="mt-5 pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
+          <Container>
+            
+          {/* COMMENTED OUT FOR NOW <Row>
+              <m.div className="col mt-32 w-full md:mt-24 home-startup-interactivebanner" {...fadeIn}>
+                <InteractiveBanners02
+                  grid="opacity-100"
+                  carousalOption={{
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    keyboard: { enabled: true, onlyInViewport: true },
+                    autoplay: { delay: 3000, disableOnInteraction: false },
+                    breakpoints: { 992: { slidesPerView: 4 }, 768: { slidesPerView: 2 } }
+                  }}
+                  data={InteractiveBannersData}
+                />
+              </m.div>
+                </Row> */}
+          </Container>
+        </section>
+        {/* Section End */}
+
+        {/* Section Start */}
+
         {/* COMMENTED OUT NO NEED FOR THIS SECTION <section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
           <Container>
             <m.div className="text-center justify-center row" {...fadeIn}>
