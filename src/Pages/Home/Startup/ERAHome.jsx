@@ -200,7 +200,7 @@ const HomeStartupPage = (props) => {
       {/* Section End */}
 
       {/* Section Start */}
-      <section className="bg-cover bg-center pb-[200px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
+      <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
             <Overlap className="md:mt-0">
@@ -241,48 +241,6 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="mt-5 pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
-          <Container>
-            <m.div className="row justify-center" {...fadeIn}>
-              <Col lg={5} sm={9} className="md:text-center md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
-                <h2 className="heading-5 font-serif leading-[3rem] text-darkgray font-semibold w-[85%] lg:w-full">From service to success, we empower veterans with specialize training and job placement support</h2>
-              </Col>
-              <Col lg={{ span: 6, offset: 1 }}>
-                <Row sm={2} xs={1} className="gap-y-10">
-                  <Col className="xs:text-center">
-                    <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Hiring</span>
-                    <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Placement of highly trained veterans.  Let us help you grow your business with qualified and trained personnel.</p>
-                  </Col>
-                  <Col className="xs:text-center">
-                    <div className="">
-                      <span className="font-serif font-medium mb-[10px] block text-darkgray xs:mb-[5px]">Training</span>
-                      <p className="w-[85%] lg:w-full xs:w-[75%] sm:mx-auto">Online courses and certifications keeping up with the latest technologies and practices.</p>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </m.div>
-          {/* COMMENTED OUT FOR NOW <Row>
-              <m.div className="col mt-32 w-full md:mt-24 home-startup-interactivebanner" {...fadeIn}>
-                <InteractiveBanners02
-                  grid="opacity-100"
-                  carousalOption={{
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    loop: true,
-                    keyboard: { enabled: true, onlyInViewport: true },
-                    autoplay: { delay: 3000, disableOnInteraction: false },
-                    breakpoints: { 992: { slidesPerView: 4 }, 768: { slidesPerView: 2 } }
-                  }}
-                  data={InteractiveBannersData}
-                />
-              </m.div>
-                </Row> */}
-          </Container>
-        </section>
-        {/* Section End */}
-
-        {/* Section Start */}
         {/* COMMENTED OUT NO NEED FOR THIS SECTION <section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
           <Container>
             <m.div className="text-center justify-center row" {...fadeIn}>
@@ -302,12 +260,12 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] overflow-hidden startup-processstep">
+        <section className="py-[75px] lg:py-[30px] md:py-[25px] sm:py-[20px] overflow-hidden startup-processstep">
           <Container>
             <Row className="items-center justify-center">
               <Col xl={5} lg={6} md={10}>
                 <span className="font-serif text-xmd font-medium text-erablue inline-block mb-[20px] sm:mb-[10px]">Business process</span>
-                <h2 className="heading-5 font-serif font-semibold text-darkgray block -tracking-[.5px] mb-20 w-[85%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
+                <h2 className="heading-5 font-serif font-semibold text-darkgray text-lg leading-relaxed -tracking-[.5px] mb-20 w-[90%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
                 <ProcessStep grid="row-cols-1" theme='process-step-style-02' data={ProcessStepData} animation={fadeIn} />
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>
