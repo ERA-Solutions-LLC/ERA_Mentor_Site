@@ -4,13 +4,13 @@ const router = express.Router();
 
 const {json} = require('body-parser')
 
-const PayRoll = require('../../models/payroll');
+const payRoll = require('../../models/payroll');
 
 router.get('/leave-time', async (req, res) => {
 
   try {
 
-    const PayRoll = await PayRoll.getAllPayRoll();
+    const PayRoll = await payRoll.getAllPayRoll();
 
     res.json(PayRoll);
 
@@ -28,7 +28,7 @@ router.get('/payroll/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const PayRoll = await PayRoll.findLeaveTimeById(id);
+    const PayRoll = await payRoll.findLeaveTimeById(id);
 
     if (PayRoll) {
 
@@ -52,7 +52,7 @@ router.post('/insert-payroll', async (req, res) => {
 
   try {
 
-    const insertedPayRoll = await PayRoll.insertPayRoll(req.body);
+    const insertedPayRoll = await payRoll.insertPayRoll(req.body);
 
     res.status(201).json({ message: 'payroll created' });
 
@@ -70,11 +70,11 @@ router.put('/update-payroll/:id'), async (req, res) => {
 
     const { id } = req.params;
 
-    const updatedPayRoll = await PayRoll.updateLeaveTime(req.body, id);
+    const updatedPayRoll = await payRoll.updateLeaveTime(req.body, id);
 
     if (updatedPayRoll) {
 
-      const PayRoll = await PayRoll.findPayRollById(id);
+      const PayRoll = await payRoll.findPayRollById(id);
 
       res.json(PayRoll);
 
@@ -97,7 +97,7 @@ router.delete('/delete-payroll/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const deletedPayRoll = await PayRoll.deletePayRoll(id);
+    const deletedPayRoll = await payRoll.deletePayRoll(id);
 
     if (deletedPayRoll) {
 

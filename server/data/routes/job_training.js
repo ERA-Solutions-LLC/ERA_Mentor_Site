@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {json} = require('body-parser')
 
-const JobTraining = require('../../models/job_training');
+const jobTraining = require('../../models/job_training');
 
 
 
@@ -13,7 +13,7 @@ router.get('/job_training', async (req, res) => {
 
   try {
 
-    const JobTraining = await JobTraining.getAllJobTraining();
+    const JobTraining = await jobTraining.getAllJobTraining();
 
     res.json(JobTraining);
 
@@ -31,7 +31,7 @@ router.get('/job-training/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const JobTraining = await JobTraining.findJobTrainingById(id);
+    const JobTraining = await jobTraining.findJobTrainingById(id);
 
     if (JobTraining) {
 
@@ -55,7 +55,7 @@ router.post('/insert-job_training', async (req, res) => {
 
   try {
 
-    const insertedJobTraining = await JobTraining.insertJobTraining(req.body);
+    const insertedJobTraining = await jobTraining.insertJobTraining(req.body);
 
     res.status(201).json({ message: 'job_training time created' });
 
@@ -73,11 +73,11 @@ router.put('/update-job_training/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const updatedJobTraining = await JobTraining.updateJobTraining(req.body, id);
+    const updatedJobTraining = await jobTraining.updateJobTraining(req.body, id);
 
     if (updatedJobTraining) {
 
-      const JobTraining = await JobTraining.findJobTrainingById(id);
+      const JobTraining = await jobTraining.findJobTrainingById(id);
 
       res.json(JobTraining);
 
@@ -101,7 +101,7 @@ router.delete('/delete-job_training/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const deletedJobTraining = await JobTraining.deleteLeaveTime(id);
+    const deletedJobTraining = await jobTraining.deleteLeaveTime(id);
 
     if (deletedJobTraining) {
 
