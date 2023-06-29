@@ -200,7 +200,7 @@ const HomeStartupPage = (props) => {
       {/* Section End */}
 
       {/* Section Start */}
-      <section className="bg-cover bg-center pb-[200px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
+      <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
             <Overlap className="md:mt-0 xs:hidden">
@@ -241,6 +241,7 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
+
         <section className="mt-5 pb-[130px] lg:pb-[90px] md:pb-[75px] sm:py-[50px] overflow-hidden">
           <Container>
             
@@ -265,6 +266,7 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
+
         {/* COMMENTED OUT NO NEED FOR THIS SECTION <section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
           <Container>
             <m.div className="text-center justify-center row" {...fadeIn}>
