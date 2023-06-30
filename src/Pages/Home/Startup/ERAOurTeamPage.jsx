@@ -488,10 +488,10 @@ const OurTeamPage = (props) => {
 
       {/* Section start*/}
       <section id="position-open" className="py-[130px] lg:pt-[90px] lg:pb-[80px] md:pt-[75px] md:pb-[100px] sm:pt-[50px]">
-        <Container>
+        <Container className=''>
           <m.div className="row justify-center" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
-            <Col lg={5} sm={7} className="col-12 text-center mb-20 sm:mb-12">
-              <span className="font-serif font-medium text-fastblue block mb-[15px]">Ready to jump-start your career?</span>
+            <Col lg={5} sm={7} className="col-12  text-center mb-20 sm:mb-12">
+              <span className="font-serif font-medium text-fastblue  block mb-[15px]">Ready to jump-start your career?</span>
               <h5 className="font-serif font-medium text-darkgray inline-block -tracking-[.5px]">If you’re looking for rapid career growth and a positive, encouraging work enviroment, come join us! We are one of the fastest growing companies, who want to advance their careers while helping America’s service members, veterans, and military spouses.
 </h5>
             </Col>
