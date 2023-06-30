@@ -200,7 +200,7 @@ const HomeStartupPage = (props) => {
       {/* Section End */}
 
       {/* Section Start */}
-      <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] startup-iconwithtext text-white bg-zinc-300" >
+      <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] xl: pb-[25px]  startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
             <Overlap className="md:mt-0 xs:hidden">
@@ -215,8 +215,8 @@ const HomeStartupPage = (props) => {
           <Counter
         as="h5"
         theme="counter-style-01"
-        grid="row-cols-1 row-cols-md-3 row-cols-sm-2"
-        className="text-erablue "
+        grid="row-cols-2 row-cols-md-3 row-cols-sm-2"
+        className="text-erablue text-center pl-14 "
         duration={7}
         data={CounterData01}
         postfix_sign="+"

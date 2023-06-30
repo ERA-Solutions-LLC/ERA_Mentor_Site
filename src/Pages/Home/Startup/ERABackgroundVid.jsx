@@ -12,7 +12,7 @@ const ERABackgroundVid = () => {
     
     return (
     <Videos
-      className=" w-full h-full backdrop-brightness-50 py-[160px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[550px] md:h-[400px] sm:h-auto xs:h-[26vh]"
+      className=" w-full h-full backdrop-brightness-50 py-[550px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[700px] md:h-[700px] sm:h-auto xs:h-[26vh]"
       src={bgVideo}
       loop={true}
       poster="/assets/img/mfg-close.png">
