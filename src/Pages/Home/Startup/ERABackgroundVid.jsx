@@ -12,11 +12,11 @@ const ERABackgroundVid = () => {
     
     return (
     <Videos
-      className=" w-full h-full backdrop-brightness-50 py-[550px] pb-0 xl:py-[120px] md:py-[95px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[700px] md:h-[700px] sm:h-auto xs:h-[26vh]"
+      className=" w-full h-full  py-[550px] pb-0 xl:py-[120px] md:py-[75px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[700px] md:h-[556px] sm:h-auto xs:h-[26vh]"
       src={bgVideo}
       loop={true}
       poster="/assets/img/mfg-close.png">
-      <Container className="h-full mx-lg">
+      <Container className="h-full mx-lg xl:h-[400px]">
         <Row className="items-end justify-center h-full w-full">
           <Col xl={6} lg={7} md={10} className="relative z-[2] text-center">
             {/* <span className="mb-[5px] font-serif text-white  block">Talent Solutions and Training</span> */}
