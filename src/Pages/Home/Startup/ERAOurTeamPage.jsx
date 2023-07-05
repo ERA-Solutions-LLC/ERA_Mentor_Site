@@ -346,7 +346,7 @@ const OurTeamPage = (props) => {
                 <span> </span>
               </TiltBox>
             </Col>
-            <ScrollTo to="position-open" offset={0} delay={0} spy={true} smooth={true} duration={800} className="absolute justify-center bottom-[50px] left-1/2 w-[45px] px-0 flex h-[45px] -translate-x-1/2 sm:bottom-7 box-shadow-small rounded-full cursor-pointer">
+            <ScrollTo to="Position Open" offset={0} delay={0} spy={true} smooth={true} duration={800} className="absolute justify-center bottom-[50px] left-1/2 w-[45px] px-0 flex h-[45px] -translate-x-1/2 sm:bottom-7 box-shadow-small rounded-full cursor-pointer">
               <i className="feather-arrow-down text-lg leading-[1] text-[#e05fc4] bg-white xs:p-[10px] rounded-full flex justify-center items-center"></i>
             </ScrollTo>
           </Row>
@@ -362,7 +362,7 @@ const OurTeamPage = (props) => {
               <m.div className="font-medium text-darkgray font-serif pb-[100px] lg:pb-[70px] ml-[97px] lg:ml-[0px] md:text-center col-xl-5 col-lg-6 col-md-7 order-lg-2" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
                 <span className=" mb-[35px] text-lg inline-block relative whitespace-nowrap md:text-xmd">Looking to elevate your career? Join Era Solutions.</span>
                 <h4 className="-tracking-[.5px] mb-[45px] xs:w-[99%]">Discover our current job openings, connect with our dedicated team, and <span className="font-semibold">embark on a transformative journey with us.</span></h4>
-                <ScrollTo to="position-open" offset={0} delay={0} spy={true} smooth={true} duration={800}>
+                <ScrollTo to="Position Open" offset={0} delay={0} spy={true} smooth={true} duration={800}>
                   <Buttons type="submit"
                    ariaLabel="button" className="font-medium font-serif uppercase hover:text-white btn-expand" size="lg" color="#3975f6" themeColor="#232323" title="Open Jobs" style={{ borderRadius: '5%'}}  />
                 </ScrollTo>
