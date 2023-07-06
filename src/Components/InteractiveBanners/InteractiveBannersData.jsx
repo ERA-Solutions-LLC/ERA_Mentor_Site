@@ -146,7 +146,7 @@ const InteractiveBannersData04 = [
 const InteractiveBannersData05 = [
     {
         title: "Transition Advisor",
-        subtitle: "position open",
+        subtitle: "Accepting Applicants",
         img: Advisor,
         btnTitle: "Apply now",
         btnLink: "/contact",
