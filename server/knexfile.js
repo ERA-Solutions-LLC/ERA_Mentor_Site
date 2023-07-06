@@ -12,9 +12,9 @@ module.exports = {
     connection: {
       host: '127.0.0.1',
       port: 3306,
-      user: 'root',
-      password: '',
-      database: 'era_website_db'
+      user: 'knexuser',
+      password: 'password',
+      database: 'db_mentor_site'
     },
     migrations: {
       directory: './data/migrations'
