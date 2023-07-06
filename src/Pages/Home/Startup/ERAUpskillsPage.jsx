@@ -575,7 +575,7 @@ const AboutMePage = (props) => {
                 <Col className="mb-12">
                   <div className="font-serif text-white mb-[5px] flex">
                     <span className="w-[10px] h-[1px] bg-white self-center relative -top-[1px] mr-[10px] shrink-0"></span>
-                    <div className="grow-1">Repitition</div></div>
+                    <div className="grow-1">Repetition</div></div>
                   <p className="text-white md:w-[70%] xs:w-full">Learn coding quickly and efficiently by repitition.</p>
                 </Col>
                 <Col className="mb-[3.5rem]">
@@ -627,7 +627,7 @@ const AboutMePage = (props) => {
                   <div className="relative subscribe-style-02 w-4/5 md:w-full">
                     <Form className="relative">
                       <Input showErrorMsg={false} type="email" name="email" className="border-[1px] medium-input border-solid border-transparent !pr-[175px] xs:!pr-[32px]" placeholder="Enter your email address" />
-                      <button type="submit" className={`text-xs tracking-[1px] py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}>Start a project</button>
+                      <button type="submit" className={`text-xs tracking-[1px] py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}>Connect With Us</button>
                     </Form>
                     <AnimatePresence>
                       {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute top-[115%] left-0 w-full"><MessageBox className="py-[5px] rounded-[100px] text-center z-[1]" theme="message-box01" variant="success" message="Your message has been sent successfully subscribed to our email list!" /></m.div>}
