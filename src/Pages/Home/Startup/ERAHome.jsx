@@ -159,7 +159,6 @@ const HomeStartupPage = (props) => {
   return (
     <div style={props.style}>
       {/* Header Start */}
-      {/* Header Start */}
       <Header topSpace={{ md: true }} type="reverse-scroll">
         <HeaderNav theme="light" expand="lg" className="py-[0px] border-b !border-b-[#fff] lg:px-[15px] md:px-0" containerClass="sm:px-0">
           <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">

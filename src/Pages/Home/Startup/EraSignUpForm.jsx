@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
+
+//Libaries 
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
+import { Col, Container, Navbar, Row, Tab, Tabs } from "react-bootstrap";
 import * as Yup from 'yup';
 import axios from 'axios';
 
-const SignUpForm = () => {
+//Components
+import { Header, HeaderCart, HeaderLanguage, HeaderNav, Menu, SearchBar } from "../../../Components/Header/Header";
+
+//Import Images
+import ERALogo from "../../../Assets/img/era-logo-transparent.png"
+
+
+
+
+
+const SignUpForm = (props) => {
   const [error, setError] = useState('');
 
   const formik = useFormik({
     initialValues: {
+      firstName: '',
+      lastName: '',
       email: '',
       confirmEmail: '',
       phoneNumber: '',
@@ -15,6 +31,8 @@ const SignUpForm = () => {
       confirmPassword: ''
     },
     validationSchema: Yup.object().shape({
+      firstName: Yup.string().required('First name is required.'),
+      lastName: Yup.string().required('Last name required.'),
       email: Yup.string().email('Invalid email format.').required('Email is required.'),
       confirmEmail: Yup.string()
         .oneOf([Yup.ref('email'), null], 'Emails must match.')
@@ -42,8 +60,83 @@ const SignUpForm = () => {
   });
 
   return (
+    <div style={props.style}>
+      {/* Header Start */}
+      <Header topSpace={{ md: true }} type="reverse-scroll">
+      <HeaderNav theme="light" expand="lg" menu="light" className="py-[0px] lg:px-[15px] md:px-0" containerClass="sm:px-0">
+          <Col className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0 xs:px-0">
+            <Link aria-label="header logo" className="flex items-center" to="/">
+              <Navbar.Brand className="inline-block p-0 m-0">
+                <img className="default-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src={ERALogo} alt='logo' />
+              </Navbar.Brand>
+            </Link>
+          </Col>
+          <div className="col-auto hidden order-last md:block">
+            <Navbar.Toggle className="md:ml-[10px] sm:ml-0">
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+              <span className="navbar-toggler-line"></span>
+            </Navbar.Toggle>
+          </div>
+          <Navbar.Collapse className="col-auto px-0 justify-end">
+            <Menu {...props} />
+          </Navbar.Collapse>
+          <Col className="col-auto text-right pe-0">
+            {/* <SearchBar className="pr-0" /> */}
+            {/*<HeaderLanguage />
+            <HeaderCart />*/}
+          </Col>
+        </HeaderNav>
+      </Header>
+      {/* Header End */}
     <div className="flex justify-center items-center h-screen">
-      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={formik.handleSubmit}>
+      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={formik.handleSubmit}>
+      {/* First Name */}
+      <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mt-3 mb-2" htmlFor="firstName">
+            First Name
+          </label>
+          <input
+            className={`appearance-none border ${
+              formik.touched.firstName && formik.errors.firstName ? 'border-red-500' : 'border-gray-300'
+            } rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+            id="firstName"
+            name="firstName"
+            type="firstName"
+            placeholder="Enter your first name"
+            value={formik.values.firstName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.firstName && formik.errors.firstName && (
+            <p className="text-red-500 text-xs italic">{formik.errors.firstName}</p>
+          )}
+        </div>
+      {/* Last name */}
+      <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+            Last Name
+          </label>
+          <input
+            className={`appearance-none border ${
+              formik.touched.lastName && formik.errors.lastName ? 'border-red-500' : 'border-gray-300'
+            } rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+            id="lastName"
+            name="lastName"
+            type="lastName"
+            placeholder="Enter your last name"
+            value={formik.values.lastName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.lastName && formik.errors.lastName && (
+            <p className="text-red-500 text-xs italic">{formik.errors.lastName}</p>
+          )}
+        </div>
+        {/* Email */}
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
             Email
@@ -160,6 +253,7 @@ const SignUpForm = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
