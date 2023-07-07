@@ -185,7 +185,7 @@ const ContactUsModernPage = (props) => {
                       <Form ref={form}>
                         <Input showErrorMsg={false} type="text" name="name" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Your name" />
                         <Input showErrorMsg={false} type="email" name="email" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Your email address" />
-                        <Input showErrorMsg={false} type="tel" name="phone" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Mobile no" />
+                        <Input showErrorMsg={false} type="tel" name="phone" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Phone Number" />
                         <TextArea
                           className="py-[20px] pr-[36px] mb-[32px] w-full bg-transparent border-b border-solid border-black text-[16px] resize-none"
                           name="comment"
