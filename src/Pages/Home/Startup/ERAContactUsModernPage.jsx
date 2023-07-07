@@ -78,19 +78,14 @@ const ContactUsModernPage = (props) => {
       <SideButtons />
       {/* Section Start */}
       <section className="bg-gradient-to-tr from-[#3975f6] via-[#FFF] to-[#f3aaca] py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
-        <Container className="h-[300px] sm:h-[250px] flex justify-center sm:justify-end">
-          <Row xs={1} md={2} className="items-end justify-end sm:flex-col">
-            <Col className="p-0 sm:!px-[15px] sm:mb-[20px]">
-              <h1 className="text-xmd !leading-[20px] pl-[90px] pr-[15px] text-darkgray font-serif mb-0 relative sm:pl-[55px] md:mb-0 sm:mb-[20px]">
-                {/*<span className="h-[1px] absolute top-[12px] left-0 w-[70px] bg-black sm:w-[40px] sm:top-1/2"></span>*/}
-                
-              </h1>
-            </Col>
+        <Container className="h-[300px] sm:h-[250px] flex justify-center items-center">
+          <Row xs={1} md={2} className="items-end justify-center sm:flex-col">
             <Col className="p-0 sm:!px-[15px]">
-              <h4 className="font-medium text-slate-50 bg-black opacity-60  font-serif mb-0">Sounds great, but how do I sign up?</h4>
+              <h4 className="font-medium text-black font-serif mb-0">Sounds great, but how do I sign up?</h4>
             </Col>
-          </Row>
-        </Container>
+              </Row>
+              </Container>
+
       </section>
       {/* Section End */}
 
@@ -191,7 +186,7 @@ const ContactUsModernPage = (props) => {
                       <Form ref={form}>
                         <Input showErrorMsg={false} type="text" name="name" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Your name" />
                         <Input showErrorMsg={false} type="email" name="email" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Your email address" />
-                        <Input showErrorMsg={false} type="tel" name="phone" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Mobile no" />
+                        <Input showErrorMsg={false} type="tel" name="phone" labelClass="mb-[25px]" className="pt-[20px] pr-[36px] pb-[20px] w-full bg-transparent border-b border-solid border-black text-[16px]" placeholder="Phone Number" />
                         <TextArea
                           className="py-[20px] pr-[36px] mb-[32px] w-full bg-transparent border-b border-solid border-black text-[16px] resize-none"
                           name="comment"
