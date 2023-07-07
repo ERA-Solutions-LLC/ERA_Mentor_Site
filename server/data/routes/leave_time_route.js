@@ -26,7 +26,7 @@ router.get('/leave-time/:id', async (req, res) => {
   }
 });
 
-router.post('/insert-leave-time', async (req, res) => {
+router.post('/leave-time', async (req, res) => {
   try {
     const insertedLeaveTime = await LeaveTime.insertLeaveTime(req.body);
     res.status(201).json({ message: 'Leave time created' });
@@ -35,7 +35,7 @@ router.post('/insert-leave-time', async (req, res) => {
   }
 });
 
-router.put('/update-leave-time/:id', async (req, res) => {
+router.put('/leave-time/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedLeaveTime = await LeaveTime.updateLeaveTime(req.body, id);
@@ -50,7 +50,7 @@ router.put('/update-leave-time/:id', async (req, res) => {
   }
 });
 
-router.delete('/delete-leave-time/:id', async (req, res) => {
+router.delete('/leave-time/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedLeaveTime = await LeaveTime.deleteLeaveTime(id);
