@@ -26,7 +26,7 @@ const LoginForm = () => {
     }),
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('/api/login', values);
+        const response = await axios.post('/api/company-users', values);
         const { is_hr } = response.data.is_hr;
 
         if (is_hr) {
