@@ -2,7 +2,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}", "./src/**/**/*.{js,jsx}", "./src/**/**/**/*.{js,jsx}"],
   theme: {
     screens: {
-      'xl': { 'max': '1600px' },
+      'xl': { 'max': '1920px' },
       'lg': { 'max': '1199px' },
       'md': { 'max': '991px' },
       'sm': { 'max': '767px' },
