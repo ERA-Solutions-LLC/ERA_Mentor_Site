@@ -14,7 +14,7 @@ module.exports = {
       port: 3306,
       user: 'knexuser',
       password: 'password',
-      database: 'db_mentor_site'
+      database: 'dberadev'
     },
     migrations: {
       directory: './data/migrations'
@@ -27,11 +27,11 @@ module.exports = {
   staging: {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
+      host: 'ls-de27078989dc327f04b79b7a5a3f796184a8c6bf.cdkhikq7z23z.us-west-2.rds.amazonaws.com',
       port: 3306,
-      user: 'root',
-      password: '',
-      database: 'era_website_db'
+      user: 'eradevdbuser',
+      password: 'Fj%X8ZWuaVdSe1&19J`PA}gq84K2hHtN',
+      database: 'dberadev'
     },
 
     pool: {
@@ -48,11 +48,11 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
+      host: 'ls-de27078989dc327f04b79b7a5a3f796184a8c6bf.cdkhikq7z23z.us-west-2.rds.amazonaws.com',
       port: 3306,
-      user: 'root',
-      password: '',
-      database: 'era_website_db'
+      user: 'eradevdbuser',
+      password: 'Fj%X8ZWuaVdSe1&19J`PA}gq84K2hHtN',
+      database: 'dberadev'
     },
 
     pool:{
