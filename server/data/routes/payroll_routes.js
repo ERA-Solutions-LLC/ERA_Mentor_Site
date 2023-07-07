@@ -48,7 +48,7 @@ router.get('/payroll/:id', async (req, res) => {
 
 });
 
-router.post('/insert-payroll', async (req, res) => {
+router.post('/payroll', async (req, res) => {
 
   try {
 
@@ -64,7 +64,7 @@ router.post('/insert-payroll', async (req, res) => {
 
 });
 
-router.put('/update-payroll/:id', async (req, res) => {
+router.put('/payroll/:id', async (req, res) => {
 
   try {
 
@@ -91,7 +91,7 @@ router.put('/update-payroll/:id', async (req, res) => {
 
 });
 
-router.delete('/delete-payroll/:id', async (req, res) => {
+router.delete('/payroll/:id', async (req, res) => {
 
   try {
 

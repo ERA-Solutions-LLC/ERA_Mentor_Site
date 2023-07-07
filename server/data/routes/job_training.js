@@ -39,7 +39,7 @@ router.get('/job-training/:id', async (req, res) => {
 
     } else {
 
-      res.status(404).json({ message: 'job_training time not found' });
+      res.status(404).json({ message: 'job training time not found' });
 
     }
 
@@ -51,23 +51,27 @@ router.get('/job-training/:id', async (req, res) => {
 
 });
 
-router.post('/insert-job_training', async (req, res) => {
+router.post('/job-training', async (req, res) => {
 
   try {
 
     const insertedJobTraining = await jobTraining.insertJobTraining(req.body);
 
-    res.status(201).json({ message: 'job_training time created' });
+    if(insertedJobTraining) {
+
+      res.status(201).json({ message: 'job training created' });
+    } else {
+      res.status(400).json({message: 'could not create job training  '})
+    }
 
   } catch (error) {
 
-    res.status(500).json({ error: error.message, message: 'Failed to create job_training' });
+    res.status(500).json({ error: error.message });
 
   }
-
 });
 
-router.put('/update-job_training/:id', async (req, res) => {
+router.put('/job_training/:id', async (req, res) => {
 
   try {
 
@@ -83,7 +87,7 @@ router.put('/update-job_training/:id', async (req, res) => {
 
     } else {
 
-      res.status(404).json({ message: 'job_training not found' });
+      res.status(404).json({ message: 'job training not found' });
 
     }
 
@@ -95,7 +99,7 @@ router.put('/update-job_training/:id', async (req, res) => {
 
 });
 
-router.delete('/delete-job_training/:id', async (req, res) => {
+router.delete('/job_training/:id', async (req, res) => {
 
   try {
 
@@ -105,11 +109,11 @@ router.delete('/delete-job_training/:id', async (req, res) => {
 
     if (deletedJobTraining) {
 
-      res.json({ message: 'job_training deleted' });
+      res.json({ message: 'job training deleted' });
 
     } else {
 
-      res.status(404).json({ message: 'job_training not found' });
+      res.status(404).json({ message: 'job training not found' });
 
     }
 
