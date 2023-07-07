@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const history = useNavigate();
   const [error, setError] = useState('');
+
+
 
   const formik = useFormik({
     initialValues: {
@@ -28,14 +30,15 @@ const LoginForm = () => {
         const { is_hr } = response.data.is_hr;
 
         if (is_hr) {
-            history.push('/hr-dashboard'); // Redirect to HrDashboard component
+          history.push('/hr-dashboard'); // Redirect to HrDashboard component
         } else {
-            history.push('/employee-dashboard'); // Redirect to EmployeeDashboard component
+          history.push('/employee-dashboard'); // Redirect to EmployeeDashboard component
         }
       } catch (error) {
         setError('Invalid email or password.'); // Set error message based on server response
       }
-    }
+    },
+   
   });
 
   return (
@@ -84,6 +87,13 @@ const LoginForm = () => {
         {error && <p className="text-red-500 text-xs italic">{error}</p>}
         <div className="flex items-center justify-between">
           <button
+            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+           
+          >
+           <Link to={'/'}> Back</Link>
+          </button>
+          <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
@@ -96,3 +106,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
