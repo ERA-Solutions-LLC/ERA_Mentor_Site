@@ -203,7 +203,7 @@ const HomeStartupPage = (props) => {
       <section className="bg-cover bg-center pb-[75px] lg:pb-[160px] md:py-[110px] sm:py-[50px] xl: pb-[25px]  startup-iconwithtext text-white bg-zinc-300" >
         <Container>
           <div className="mb-[105px] md:mb-[70px] sm:mb-[50px]">
-            <Overlap className="md:mt-0 xs:hidden">
+            <Overlap className=" md:mt-0 xs:hidden">
               <Row className="justify-center">
                 <Col xs={7} sm={9} lg={12} md={12}>
                   <IconWithText grid="row-cols-3 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 row-cols-xs-1 row-cols-xxs-1 justify-center gap-y-12 z-13 relative" className=" text-black mt-17px rounded-[4px] flex" theme="icon-with-text-04" data={iconWithTextData} />
