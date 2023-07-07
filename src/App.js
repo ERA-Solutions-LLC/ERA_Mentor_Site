@@ -290,6 +290,9 @@ const ERAUpskills = lazy(() => import("./Pages/Home/Startup/ERAUpskillsPage"))
 const ERAHome = lazy(() => import("./Pages/Home/Startup/ERAHome"))
 const ERAOurTeamPage = lazy(() => import("./Pages/Home/Startup/ERAOurTeamPage"))
 const EraLoginForm = lazy(() => import("./Pages/Home/Startup/EraLoginForm"))
+const EraSignUpForm = lazy(() => import("./Pages/Home/Startup/EraSignUpForm"))
+const EraEmployeeDashboard = lazy(() => import('./Pages/Home/Startup/EraEmployeeDashboard'))
+const EraEmployeeUpdateForm = lazy(() => import('./Pages/Home/Startup/EraEmployeeUpdateForm'))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -419,7 +422,10 @@ function App() {
                   <Route path="/upskill" element={<ERAUpskills/>} />
                   <Route path="/careers" element={<ERAOurTeamPage/>} />
                   <Route path="/login" element={<EraLoginForm/>} />
-
+                  <Route path="/sign-up" element={<EraSignUpForm />} />
+                  <Route path="/employee-dashboard" element={<EraEmployeeDashboard />} />
+                  <Route path="/update" element={<EraEmployeeUpdateForm />} />
+          
                   {/* Home Specialized */}
                   <Route path="/home-restaurant" element={<RestaurantPage />} />
                   <Route path="/home-architecture" element={<ArchitecturePage style={{ "--base-color": "#cee002" }} />} />

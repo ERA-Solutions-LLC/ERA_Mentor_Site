@@ -375,7 +375,7 @@ const HomeStartupPage = (props) => {
                     <div className="relative subscribe-style-04 w-[93%] mx-auto xs:w-full">
                       <Form className="relative">
                         <Input showErrorMsg={false} type="email" name="email" className="border-[1px] border-solid border-transparent large-input xs:mb-[60px] pr-[190px]" placeholder="Enter your email address" />
-                        <button aria-label="submit" type="submit" className={`text-xs tracking-[1px] py-[12px] px-[28px] xs:!block uppercase${isSubmitting ? " loading" : ""}`}>Subscribe Now</button>
+                        <button aria-label="submit" type="submit" className={`text-xs tracking-[1px] py-[12px] px-[28px] xs:!block uppercase${isSubmitting ? " loading" : ""}`}>Connect With Us</button>
                       </Form>
                       <AnimatePresence>
                         {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="font-serif absolute top-[115%] left-0 w-full"><MessageBox className="py-[5px] rounded-[4px] z-[2]" theme="message-box01" variant="success" message="Your message has been sent successfully subscribed to our email list!" /></m.div>}

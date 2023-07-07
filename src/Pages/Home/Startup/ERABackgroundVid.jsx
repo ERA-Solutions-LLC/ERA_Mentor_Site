@@ -12,7 +12,6 @@ const ERABackgroundVid = () => {
     
     return (
     <Videos
-
       className=" w-full h-full py-[550px] pb-0 xl:py-[120px] md:py-[75px] sm:py-[80px] xs:py-0 h-[700px] xl:h-[700px] md:h-[556px] sm:h-auto xs:h-[26vh]"
       src={bgVideo}
       loop={true}

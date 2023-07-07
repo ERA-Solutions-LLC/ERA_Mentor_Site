@@ -3,7 +3,7 @@ const router = express.Router();
 const { json } = require('body-parser');
 const EmployeeDetails = require('../../models/employee_details');
 
-router.get('/get-employee-details', async (req, res) => {
+router.get('/employee-details', async (req, res) => {
   try {
     const employeeDetails = await EmployeeDetails.getAllEmployeeDetails();
     res.json(employeeDetails);
@@ -12,17 +12,9 @@ router.get('/get-employee-details', async (req, res) => {
   }
 });
 
-router.get('/employee-details/', (req, res) => {
-    Employee_details.getAllEmployeeDetails()
-    .then(employee_details => {
-        res.json(employee_details)
-    })
-    .catch(err => res.send(err))
-})
-
 router.get('/employee-details/:id', (req, res) => {
     const { id } = req.params
-    Employee_details.findEmployeeDetailsById(id)
+    EmployeeDetails.findEmployeeDetailsById(id)
     .then(employee_details => {
         if(employee_details) {
             res.status(200).json(employee_details)
@@ -34,7 +26,7 @@ router.get('/employee-details/:id', (req, res) => {
 })
 
 
-router.put('/update-employee-details/:id', async (req, res) => {
+router.put('/employee-details/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedDetails = await EmployeeDetails.updateEmployeeDetails(req.body, id);
@@ -49,7 +41,7 @@ router.put('/update-employee-details/:id', async (req, res) => {
   }
 });
 
-router.delete('/delete-employee-details/:id', async (req, res) => {
+router.delete('/employee-details/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedDetails = await EmployeeDetails.deleteEmployeeDetails(id);

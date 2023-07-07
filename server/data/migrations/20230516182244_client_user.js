@@ -12,6 +12,8 @@ exports.up = function(knex) {
 
             table.string('email', 50).notNullable()
 
+            table.string('phone_number', 20).notNullable()
+
             table.string('subject', 30).notNullable()
 
             table.string('message').notNullable() 

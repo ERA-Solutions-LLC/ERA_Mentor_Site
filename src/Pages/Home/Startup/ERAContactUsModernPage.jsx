@@ -78,14 +78,13 @@ const ContactUsModernPage = (props) => {
       <SideButtons />
       {/* Section Start */}
       <section className="bg-gradient-to-tr from-[#3975f6] via-[#FFF] to-[#f3aaca] py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
-        <Container className="h-[300px] sm:h-[250px] flex justify-center items-center">
-          <Row xs={1} md={2} className="items-end justify-center sm:flex-col">
-            <Col className="p-0 sm:!px-[15px]">
-              <h4 className="font-medium text-black font-serif mb-0">Sounds great, but how do I sign up?</h4>
-            </Col>
-              </Row>
-              </Container>
-
+      <Container className="h-[300px] sm:h-[250px] flex justify-center items-center">
+        <Row xs={1} md={2} className="items-end justify-center sm:flex-col">
+          <Col className="p-0 sm:!px-[15px]">
+            <h4 className="font-medium text-black font-serif mb-0">Sounds great, but how do I sign up?</h4>
+          </Col>
+        </Row>
+      </Container>
       </section>
       {/* Section End */}
 
