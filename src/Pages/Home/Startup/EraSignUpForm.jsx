@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 //Libaries 
 import { useFormik } from 'formik';
-import { Link } from 'react-router-dom';
+import {useNavigate, Link } from 'react-router-dom';
 import { Col, Container, Navbar, Row, Tab, Tabs } from "react-bootstrap";
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -13,11 +13,8 @@ import { Header, HeaderCart, HeaderLanguage, HeaderNav, Menu, SearchBar } from "
 //Import Images
 import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 
-
-
-
-
-const SignUpForm = (props) => {
+const SignUpForm = (props) => { 
+  const history = useNavigate();
   const [error, setError] = useState('');
 
   const formik = useFormik({
@@ -48,16 +45,20 @@ const SignUpForm = (props) => {
         .oneOf([Yup.ref('password'), null], 'Passwords must match.')
         .required('Confirm password is required.')
     }),
-    onSubmit: async (values) => {
-      try {
-        // Make API call to register the user
-        await axios.post('/api/signup', values);
-        // Redirect to login page or display success message
-      } catch (error) {
-        setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
-      }
-    }
+    // onSubmit: async (values) => {
+    //   try {
+    //     // Make API call to register the user
+    //     await axios.post('/api/signup', values);
+    //     // Redirect to login page or display success message
+    //   } catch (error) {
+    //     setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
+    //   }
+    // }
   });
+
+  const handleSubmit = () => {
+    history('/login')
+  }
 
   return (
     <div style={props.style}>
@@ -92,8 +93,8 @@ const SignUpForm = (props) => {
         </HeaderNav>
       </Header>
       {/* Header End */}
-    <div className="flex justify-center items-center h-screen">
-      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={formik.handleSubmit}>
+    <div className="flex bg-[url('./Assets/img/typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
+      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={handleSubmit}>
       {/* First Name */}
       <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mt-3 mb-2" htmlFor="firstName">
