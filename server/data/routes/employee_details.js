@@ -3,7 +3,7 @@ const router = express.Router();
 const { json } = require('body-parser');
 const EmployeeDetails = require('../../models/employee_details');
 
-router.get('/employee-details', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const employeeDetails = await EmployeeDetails.getAllEmployeeDetails();
     res.json(employeeDetails);
@@ -12,7 +12,7 @@ router.get('/employee-details', async (req, res) => {
   }
 });
 
-router.get('/employee-details/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const { id } = req.params
     EmployeeDetails.findEmployeeDetailsById(id)
     .then(employee_details => {
@@ -26,7 +26,7 @@ router.get('/employee-details/:id', (req, res) => {
 })
 
 
-router.put('/employee-details/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedDetails = await EmployeeDetails.updateEmployeeDetails(req.body, id);
@@ -41,7 +41,7 @@ router.put('/employee-details/:id', async (req, res) => {
   }
 });
 
-router.delete('/employee-details/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedDetails = await EmployeeDetails.deleteEmployeeDetails(id);

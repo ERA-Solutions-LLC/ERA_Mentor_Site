@@ -4,7 +4,7 @@ const { json } = require('body-parser');
 const CompanyUser = require('../../models/company_user_model');
 
 
-router.get('/company-users', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const companyUsers = await CompanyUser.getAllCompanyUsers();
     res.json(companyUsers);
@@ -13,7 +13,7 @@ router.get('/company-users', async (req, res) => {
   }
 });
 
-router.get('/company-user/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const companyUser = await CompanyUser.findCompanyUserById(id);
@@ -27,7 +27,7 @@ router.get('/company-user/:id', async (req, res) => {
   }
 });
 
-router.post('/company-user', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     await CompanyUser.insertCompanyUser(req.body);
     res.status(201).json({ message: 'Company user created' });
@@ -36,7 +36,7 @@ router.post('/company-user', async (req, res) => {
   }
 });
 
-router.put('/company-user/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedUser = await CompanyUser.updateCompanyUser(req.body, id);
@@ -51,7 +51,7 @@ router.put('/company-user/:id', async (req, res) => {
   }
 });
 
-router.delete('/company-user/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedUser = await CompanyUser.deleteCompanyUser(id);
