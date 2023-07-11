@@ -45,20 +45,18 @@ const SignUpForm = (props) => {
         .oneOf([Yup.ref('password'), null], 'Passwords must match.')
         .required('Confirm password is required.')
     }),
-    // onSubmit: async (values) => {
-    //   try {
-    //     // Make API call to register the user
-    //     await axios.post('/api/signup', values);
-    //     // Redirect to login page or display success message
-    //   } catch (error) {
-    //     setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
-    //   }
-    // }
-  });
+    onSubmit: async (values) => {
+      try {
+        // Make API call to register the user
+        await axios.post('/api/company-user/', values);
+        // Redirect to login page or display success message
+        history('/login');
 
-  const handleSubmit = () => {
-    history('/login')
-  }
+      } catch (error) {
+        setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
+      }
+    }
+  });
 
   return (
     <div style={props.style}>
@@ -94,7 +92,7 @@ const SignUpForm = (props) => {
       </Header>
       {/* Header End */}
     <div className="flex bg-[url('./Assets/img/typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
-      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={handleSubmit}>
+      <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={formik.handleSubmit}>
       {/* First Name */}
       <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mt-3 mb-2" htmlFor="firstName">

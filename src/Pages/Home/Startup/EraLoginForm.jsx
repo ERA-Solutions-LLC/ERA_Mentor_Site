@@ -36,13 +36,13 @@ const LoginForm = (props) => {
     }),
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('/api/company-users', values);
+        const response = await axios.post('/api/company-user/', values);
         const { is_hr } = response.data.is_hr;
 
         if (is_hr) {
-          history.push('/hr-dashboard'); // Redirect to HrDashboard component
+          history('/hr-dashboard'); // Redirect to HrDashboard component
         } else {
-          history.push('/employee-dashboard'); // Redirect to EmployeeDashboard component
+          history('/employee-dashboard'); // Redirect to EmployeeDashboard component
         }
       } catch (error) {
         setError('Invalid email or password.'); // Set error message based on server response
