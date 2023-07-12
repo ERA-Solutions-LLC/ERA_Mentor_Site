@@ -127,20 +127,27 @@ const LoginForm = (props) => {
           )}
         </div>
         {error && <p className="text-red-500 text-xs italic">{error}</p>}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center md:w-[100%] justify-between">
           <button
-            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" md:w-[49%] mx-[2%] bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline"
             type="button"
            
           >
            <Link to={'/'}> Back</Link>
           </button>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="md:w-[49%] mx-[2%] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Sign In
           </button>
+          <p class="mb-0 mt-2 pt-1 text-sm font-semibold">
+              Don't have an account?
+              <Link
+              to={'/sign-up'}
+                className="mx-[.75%] text-erablue transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+                >Register</Link>
+            </p>
         </div>
       </form>
     </div>
