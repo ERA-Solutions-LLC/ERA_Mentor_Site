@@ -6,7 +6,7 @@ const HeaderData = [
         {title: 'Careers', link:'/careers'},
         {title: 'Contact Us', link:'/contact'},
         {title: 'Login', link: '/login'},
-        {title: 'Sign Up', link: '/sign-up'}
+      
     
 ]
 
