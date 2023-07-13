@@ -293,6 +293,7 @@ const EraLoginForm = lazy(() => import("./Pages/Home/Startup/EraLoginForm"))
 const EraSignUpForm = lazy(() => import("./Pages/Home/Startup/EraSignUpForm"))
 const EraEmployeeDashboard = lazy(() => import('./Pages/Home/Startup/EraEmployeeDashboard'))
 const EraEmployeeUpdateForm = lazy(() => import('./Pages/Home/Startup/EraEmployeeUpdateForm'))
+const EraHRDashboard = lazy(() => import('./Pages/Home/Startup/EraHRDashboard'))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -425,6 +426,7 @@ function App() {
                   <Route path="/sign-up" element={<EraSignUpForm />} />
                   <Route path="/employee-dashboard" element={<EraEmployeeDashboard />} />
                   <Route path="/update" element={<EraEmployeeUpdateForm />} />
+                  <Route path="/hr-dashboard" element={<EraHRDashboard />} />
           
                   {/* Home Specialized */}
                   <Route path="/home-restaurant" element={<RestaurantPage />} />

@@ -81,16 +81,13 @@ const iconWithTextData = [
 
 const ProcessStepData = [
   {
-    title: "Strengthen Your Business's Workforce with Experienced Military Professionals.",
-    content: "Forge dynamic and cohesive teams to surpass your requirements and fuel exponential growth for your company.",
+    title: "Strengthen Your Business's Workforce with Experienced Military Professionals."
   },
   {
-    title: "Nurture growth: Empower and Promote the Right Talent within Your Organization",
-    content: "Unleash the power of talent: Cultivate a nurturing environment for employee success and lasting loyalty.",
+    title: "Nurture growth: Empower and Promote the Right Talent within Your Organization"
   },
   {
-    title: "Create an Unforgettable Workplace: Foster employee retention and fulfillment",
-    content: "Unlock the key to success: Retain top talent to propel your business forward.",
+    title: "Create an Unforgettable Workplace: Foster employee retention and fulfillment"
   }
 ]
 
@@ -289,8 +286,8 @@ const HomeStartupPage = (props) => {
           <Container>
             <Row className="items-center justify-center">
               <Col xl={5} lg={6} md={10}>
-                <span className="font-serif text-xmd font-medium text-erablue inline-block mb-[20px] sm:mb-[10px]">Business process</span>
-                <h2 className="heading-5 font-serif font-semibold text-darkgray text-lg leading-relaxed -tracking-[.5px] mb-20 w-[90%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">Unlock the Path to Productivity, We Understand the Dynamics of Workforce Development.</h2>
+                <span className="font-serif text-xmd font-medium text-erablue inline-block mb-[20px] sm:mb-[10px]">Unlock the Path to Productivity</span>
+                <h2 className="heading-5 font-serif font-semibold text-darkgray text-lg leading-relaxed -tracking-[.5px] mb-20 w-[90%] lg:mb-[80px] md:mb-12 md:w-[80%] sm:w-full">We Understand the Dynamics of Workforce Development.</h2>
                 <ProcessStep grid="row-cols-1" theme='process-step-style-02' data={ProcessStepData} animation={fadeIn} />
               </Col>
               <m.div className="offset-xl-1 col-lg-6 md:mt-[50px]" {...fadeInLeft}>

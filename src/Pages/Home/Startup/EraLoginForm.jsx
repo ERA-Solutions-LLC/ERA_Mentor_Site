@@ -17,7 +17,7 @@ import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 const LoginForm = (props) => {
   const history = useNavigate();
   const [error, setError] = useState('');
-
+  const navigate = useNavigate();
 
 
   const formik = useFormik({
@@ -36,13 +36,23 @@ const LoginForm = (props) => {
     }),
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('/api/company-users', values);
-        const { is_hr } = response.data.is_hr;
+        const response = await axios.post('http://localhost:4000/login', values);
+        console.log(response);
+        const is_hr = response.data.is_hr;
+        const validationMessage = response.data.authenticated;
+        console.log(is_hr)
 
-        if (is_hr) {
-          history.push('/hr-dashboard'); // Redirect to HrDashboard component
-        } else {
-          history.push('/employee-dashboard'); // Redirect to EmployeeDashboard component
+        if (validationMessage) {
+          if(is_hr){
+            alert("You will be logged in as HR")
+            navigate('/hr-dashboard'); // Redirect to HrDashboard component
+          } else{
+          alert("You will be signed in as an employee")
+          navigate('/employee-dashboard'); // Redirect to EmployeeDashboard component
+          }
+        }
+        else{
+          setError('Email or password incorrect. Please verify and try again.');
         }
       } catch (error) {
         setError('Invalid email or password.'); // Set error message based on server response
@@ -84,7 +94,7 @@ const LoginForm = (props) => {
         </HeaderNav>
       </Header>
       {/* Header End */}
-    <div className="flex justify-center items-center h-screen">
+      <div className="flex bg-[url('./Assets/img/lady-typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
       <form className="w-2/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={formik.handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -141,6 +151,13 @@ const LoginForm = (props) => {
           >
             Sign In
           </button>
+          <p class="mb-0 mt-2 pt-1 text-sm font-semibold">
+              Don't have an account?<br></br>
+              <Link
+              to={'/sign-up'}
+                className="mx-[.75%] text-erablue transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+                >Register - Employees</Link>
+          </p>
         </div>
       </form>
     </div>

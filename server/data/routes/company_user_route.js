@@ -4,7 +4,8 @@ const { json } = require('body-parser');
 const CompanyUser = require('../../models/company_user_model');
 
 
-router.get('/company-users', async (req, res) => {
+router.get('/', async (req, res) => {
+  res.send("Made it to the endpoint...")
   try {
     const companyUsers = await CompanyUser.getAllCompanyUsers();
     res.json(companyUsers);
@@ -13,7 +14,7 @@ router.get('/company-users', async (req, res) => {
   }
 });
 
-router.get('/company-user/:id', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { id } = req.params;
     const companyUser = await CompanyUser.findCompanyUserById(id);
@@ -27,16 +28,32 @@ router.get('/company-user/:id', async (req, res) => {
   }
 });
 
-router.post('/company-user', async (req, res) => {
+router.post('/', async (req, res) => {
+  //res.send('Nice...')
+  let userNum = Math.random();
+  let userNameString = "user"+userNum;
+  let formData = {
+    first_name: req.body.firstName,
+    last_name: req.body.lastName,
+    email: req.body.email,
+    phone_number: req.body.phoneNumber,
+    dob: "1988-02-12",
+    age: "0",
+    gender: "female",
+    username: userNameString, 
+    password: req.body.password
+  }
   try {
-    await CompanyUser.insertCompanyUser(req.body);
+    console.log("Trying to insert");
+    console.log(formData);
+    await CompanyUser.insertCompanyUser(formData);
     res.status(201).json({ message: 'Company user created' });
   } catch (error) {
     res.status(500).json({ error: error.message, message: 'Failed to create company user' });
   }
 });
 
-router.put('/company-user/:id', async (req, res) => {
+router.put('/', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedUser = await CompanyUser.updateCompanyUser(req.body, id);
@@ -51,7 +68,7 @@ router.put('/company-user/:id', async (req, res) => {
   }
 });
 
-router.delete('/company-user/:id', async (req, res) => {
+router.delete('/', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedUser = await CompanyUser.deleteCompanyUser(id);

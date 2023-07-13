@@ -10,8 +10,9 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get('/api/employee');
+        const response = await axios.get('/api/employee-details');
         setEmployeeData(response.data);
+        console.log(response);
       } catch (error) {
         setError('Failed to fetch employee data.');
       }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 //Libaries 
 import { useFormik } from 'formik';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import { Col, Container, Navbar, Row, Tab, Tabs } from "react-bootstrap";
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -18,6 +18,7 @@ import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 
 
 const SignUpForm = (props) => {
+  const navigate = useNavigate();
   const [error, setError] = useState('');
 
   const formik = useFormik({
@@ -49,10 +50,29 @@ const SignUpForm = (props) => {
         .required('Confirm password is required.')
     }),
     onSubmit: async (values) => {
+      console.log(values)
+      //values.preventDefault();
       try {
         // Make API call to register the user
-        await axios.post('/api/signup', values);
+        let response = await axios.post('http://localhost:4000/company-user', values);
+        console.log(response)
+        alert("Congratulations, you've successfully created your account!")
+        navigate('/login');
+
         // Redirect to login page or display success message
+        /*axios({
+          method: 'POST',
+          url: 'http://localhost:4000/company-user',
+          data: values
+        })
+          .then(function(res){
+            console.log(res)
+            alert('Thank you for signing up')
+            navigate('./Pages/Home/Startup/EraLoginForm');
+          })
+          .catch(function(res){
+            console.log(res)
+          });*/
       } catch (error) {
         setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
       }
@@ -92,8 +112,9 @@ const SignUpForm = (props) => {
         </HeaderNav>
       </Header>
       {/* Header End */}
-    <div className="flex justify-center items-center h-screen">
+      <div className="flex bg-[url('./Assets/img/typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
       <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={formik.handleSubmit}>
+      <p className="text-2xl font-bold mb-4 color-red">**ONLY FOR ERA SOLUTIONS EMPLOYEES AT THIS TIME**</p>
       {/* First Name */}
       <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mt-3 mb-2" htmlFor="firstName">

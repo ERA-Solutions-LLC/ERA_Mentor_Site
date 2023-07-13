@@ -8,13 +8,13 @@ const { default: knex } = require("knex");
 module.exports = {
 
   development: {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
       host: '127.0.0.1',
       port: 3306,
-      user: 'knexuser',
-      password: 'password',
-      database: 'dberadev'
+      user: 'root',
+      password: 'ALGdevMY$qls#RVer77',
+      database: 'erasolutionsus'
     },
     migrations: {
       directory: './data/migrations'

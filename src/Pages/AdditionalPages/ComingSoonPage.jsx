@@ -61,7 +61,7 @@ const ComingSoonPage = () => {
                   height="36" width="111"
                   alt="logo"
                   loading="lazy"
-                  src="/assets/img/webp/logo-fast-blue-black-big@2x.webp"
+                  src="https://dev.erasolutions.us/static/media/era-logo-transparent.45baf6ed0917eac2e841.png"
                   className="w-[142px] xs:w-[100px] inline-block"
                 />
               </Link>
