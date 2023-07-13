@@ -36,6 +36,7 @@ const LoginForm = (props) => {
     }),
     onSubmit: async (values) => {
       try {
+<<<<<<< HEAD
         const response = await axios.post('http://localhost:4000/login', values);
         console.log(response);
         const is_hr = response.data.is_hr;
@@ -53,6 +54,15 @@ const LoginForm = (props) => {
         }
         else{
           setError('Email or password incorrect. Please verify and try again.');
+=======
+        const response = await axios.post('/api/company-user/', values);
+        const { is_hr } = response.data.is_hr;
+
+        if (is_hr) {
+          history('/hr-dashboard'); // Redirect to HrDashboard component
+        } else {
+          history('/employee-dashboard'); // Redirect to EmployeeDashboard component
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
         }
       } catch (error) {
         setError('Invalid email or password.'); // Set error message based on server response
@@ -94,7 +104,11 @@ const LoginForm = (props) => {
         </HeaderNav>
       </Header>
       {/* Header End */}
+<<<<<<< HEAD
       <div className="flex bg-[url('./Assets/img/lady-typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
+=======
+    <div className="flex bg-[url('./Assets/img/lady-typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
       <form className="w-2/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={formik.handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -137,27 +151,36 @@ const LoginForm = (props) => {
           )}
         </div>
         {error && <p className="text-red-500 text-xs italic">{error}</p>}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center md:w-[100%] justify-between">
           <button
-            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" md:w-[49%] mx-[2%] bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline"
             type="button"
            
           >
            <Link to={'/'}> Back</Link>
           </button>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="md:w-[49%] mx-[2%] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Sign In
           </button>
           <p class="mb-0 mt-2 pt-1 text-sm font-semibold">
+<<<<<<< HEAD
               Don't have an account?<br></br>
               <Link
               to={'/sign-up'}
                 className="mx-[.75%] text-erablue transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
                 >Register - Employees</Link>
           </p>
+=======
+              Don't have an account?
+              <Link
+              to={'/sign-up'}
+                className="mx-[.75%] text-erablue transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+                >Register</Link>
+            </p>
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
         </div>
       </form>
     </div>

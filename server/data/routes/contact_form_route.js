@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   res.send('Hello world');
 });
 
-router.get('contact-form', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const contactForm = await ContactForm.getAllContactForm();
     res.json(contactForm);
@@ -16,7 +16,7 @@ router.get('contact-form', async (req, res) => {
   }
 });
 
-router.get('/contact-form/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const contactForm = await ContactForm.findContactFormById(id);
@@ -30,7 +30,7 @@ router.get('/contact-form/:id', async (req, res) => {
   }
 });
 
-router.post('/contact-form', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     await ContactForm.insertContactForm(req.body);
     res.status(201).json({ message: 'Contact form user created' });
@@ -39,7 +39,7 @@ router.post('/contact-form', async (req, res) => {
   }
 });
 
-router.put('/contact-form/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedContactForm = await ContactForm.updateContactForm(req.body, id);
@@ -54,7 +54,7 @@ router.put('/contact-form/:id', async (req, res) => {
   }
 });
 
-router.delete('/contact-form/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedContactForm = await ContactForm.deleteContactForm(id);

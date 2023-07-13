@@ -6,7 +6,7 @@ const {json} = require('body-parser')
 
 const PayRoll = require('../../models/payroll_model');
 
-router.get('/payroll', async (req, res) => {
+router.get('/', async (req, res) => {
 
   try {
 
@@ -22,7 +22,7 @@ router.get('/payroll', async (req, res) => {
 
 });
 
-router.get('/payroll/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
 
   try {
 
@@ -48,14 +48,16 @@ router.get('/payroll/:id', async (req, res) => {
 
 });
 
-router.post('/payroll', async (req, res) => {
+router.post('/', async (req, res) => {
 
   try {
 
     const insertedPayRoll = await PayRoll.insertPayRoll(req.body);
-
-    res.status(201).json({ message: 'payroll created' });
-
+    if (insertedPayRoll) {
+      res.status(201).json({ message: 'payroll created' });
+    } else {
+      res.status(404).json({message: 'Payroll not found'})
+    }
   } catch (error) {
 
     res.status(500).json({ error: error.message, message: 'Failed to create payroll' });
@@ -64,7 +66,7 @@ router.post('/payroll', async (req, res) => {
 
 });
 
-router.put('/payroll/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
 
   try {
 
@@ -91,7 +93,7 @@ router.put('/payroll/:id', async (req, res) => {
 
 });
 
-router.delete('/payroll/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
 
   try {
 

@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 //Libaries 
 import { useFormik } from 'formik';
+<<<<<<< HEAD
 import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+=======
+import {useNavigate, Link } from 'react-router-dom';
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
 import { Col, Container, Navbar, Row, Tab, Tabs } from "react-bootstrap";
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -13,12 +17,17 @@ import { Header, HeaderCart, HeaderLanguage, HeaderNav, Menu, SearchBar } from "
 //Import Images
 import ERALogo from "../../../Assets/img/era-logo-transparent.png"
 
+<<<<<<< HEAD
 
 
 
 
 const SignUpForm = (props) => {
   const navigate = useNavigate();
+=======
+const SignUpForm = (props) => { 
+  const history = useNavigate();
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   const [error, setError] = useState('');
 
   const formik = useFormik({
@@ -54,6 +63,7 @@ const SignUpForm = (props) => {
       //values.preventDefault();
       try {
         // Make API call to register the user
+<<<<<<< HEAD
         let response = await axios.post('http://localhost:4000/company-user', values);
         console.log(response)
         alert("Congratulations, you've successfully created your account!")
@@ -73,6 +83,12 @@ const SignUpForm = (props) => {
           .catch(function(res){
             console.log(res)
           });*/
+=======
+        await axios.post('/api/company-user/', values);
+        // Redirect to login page or display success message
+        history('/login');
+
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
       } catch (error) {
         setError('An error occurred during sign-up. Please try again.'); // Set error message based on server response
       }
@@ -112,7 +128,11 @@ const SignUpForm = (props) => {
         </HeaderNav>
       </Header>
       {/* Header End */}
+<<<<<<< HEAD
       <div className="flex bg-[url('./Assets/img/typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
+=======
+    <div className="flex bg-[url('./Assets/img/typing.jpg')] bg-no-repeat bg-cover bg-center justify-center items-center h-screen">
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
       <form className="w-2/5 bg-white shadow-md rounded px-8 pt-56 pb-8 mb-4" onSubmit={formik.handleSubmit}>
       <p className="text-2xl font-bold mb-4 color-red">**ONLY FOR ERA SOLUTIONS EMPLOYEES AT THIS TIME**</p>
       {/* First Name */}

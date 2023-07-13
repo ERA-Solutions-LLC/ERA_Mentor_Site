@@ -5,7 +5,10 @@ const CompanyUser = require('../../models/company_user_model');
 
 
 router.get('/', async (req, res) => {
+<<<<<<< HEAD
   res.send("Made it to the endpoint...")
+=======
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   try {
     const companyUsers = await CompanyUser.getAllCompanyUsers();
     res.json(companyUsers);
@@ -14,7 +17,11 @@ router.get('/', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.get('/', async (req, res) => {
+=======
+router.get('/:id', async (req, res) => {
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   try {
     const { id } = req.params;
     const companyUser = await CompanyUser.findCompanyUserById(id);
@@ -29,6 +36,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+<<<<<<< HEAD
   //res.send('Nice...')
   let userNum = Math.random();
   let userNameString = "user"+userNum;
@@ -43,6 +51,8 @@ router.post('/', async (req, res) => {
     username: userNameString, 
     password: req.body.password
   }
+=======
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   try {
     console.log("Trying to insert");
     console.log(formData);
@@ -53,7 +63,11 @@ router.post('/', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.put('/', async (req, res) => {
+=======
+router.put('/:id', async (req, res) => {
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   try {
     const { id } = req.params;
     const updatedUser = await CompanyUser.updateCompanyUser(req.body, id);
@@ -68,7 +82,11 @@ router.put('/', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.delete('/', async (req, res) => {
+=======
+router.delete('/:id', async (req, res) => {
+>>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
   try {
     const { id } = req.params;
     const deletedUser = await CompanyUser.deleteCompanyUser(id);

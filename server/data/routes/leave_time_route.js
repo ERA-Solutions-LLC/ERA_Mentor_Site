@@ -3,7 +3,7 @@ const router = express.Router();
 const {json} = require('body-parser')
 const LeaveTime = require('../../models/leave_time');
 
-router.get('/leave-time', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const leaveTime = await LeaveTime.getAllLeaveTime();
     res.json(leaveTime);
@@ -12,7 +12,7 @@ router.get('/leave-time', async (req, res) => {
   }
 });
 
-router.get('/leave-time/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const leaveTime = await LeaveTime.findLeaveTimeById(id);
@@ -26,16 +26,20 @@ router.get('/leave-time/:id', async (req, res) => {
   }
 });
 
-router.post('/leave-time', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const insertedLeaveTime = await LeaveTime.insertLeaveTime(req.body);
-    res.status(201).json({ message: 'Leave time created' });
+    if (insertedLeaveTime) {
+      res.status(201).json({ message: 'Leave time created' });
+    } else {
+      res.status(400).json({ message: 'Failed to create leave time' });
+    }
   } catch (error) {
-    res.status(500).json({ error: error.message, message: 'Failed to create leave time' });
+    res.status(500).json(({error: error.message, message: 'Server error'}));
   }
 });
 
-router.put('/leave-time/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedLeaveTime = await LeaveTime.updateLeaveTime(req.body, id);
@@ -50,7 +54,7 @@ router.put('/leave-time/:id', async (req, res) => {
   }
 });
 
-router.delete('/leave-time/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedLeaveTime = await LeaveTime.deleteLeaveTime(id);

@@ -9,7 +9,7 @@ const jobTraining = require('../../models/job_training_models');
 
 
 
-router.get('/job-training', async (req, res) => {
+router.get('/', async (req, res) => {
 
   try {
 
@@ -25,7 +25,7 @@ router.get('/job-training', async (req, res) => {
 
 });
 
-router.get('/job-training/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
 
   try {
 
@@ -51,7 +51,7 @@ router.get('/job-training/:id', async (req, res) => {
 
 });
 
-router.post('/job-training', async (req, res) => {
+router.post('/', async (req, res) => {
 
   try {
 
@@ -71,7 +71,7 @@ router.post('/job-training', async (req, res) => {
   }
 });
 
-router.put('/job_training/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
 
   try {
 
@@ -99,7 +99,7 @@ router.put('/job_training/:id', async (req, res) => {
 
 });
 
-router.delete('/job_training/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
 
   try {
 
