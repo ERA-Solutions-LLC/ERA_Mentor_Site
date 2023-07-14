@@ -30,23 +30,17 @@ const jobTrainingRoutes = require('./data/routes/job_training')
 
 const leaveTimeRoutes = require('./data/routes/leave_time_route')
 
-<<<<<<< HEAD
 const hrLogin = require('./data/routes/login')
 
 //const signUpNewUser = require('./data/routes/company_user_routes/post')
-=======
-const auth = require('./middleware/auth/autoRouter');
-
-const authenticate = require('./middleware/auth/authMiddleware')
->>>>>>> d5f4cc8af96ae18beb61a2ae4e7f3bad27ab7849
 
 //include all route paths and point to the files defining routes
 
-server.use('/api/auth', auth)
+//server.use('/api/auth', auth)
 
 server.use('/api/employee-details', employeeDetailsRoutes)
 
-server.use('/api/company-user', companyUserRoutes)
+server.use('/company-user', companyUserRoutes)
 
 server.use('/api/mail', mailRoutes)
 

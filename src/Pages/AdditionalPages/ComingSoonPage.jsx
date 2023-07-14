@@ -16,6 +16,7 @@ import SocialIcons from "../../Components/SocialIcon/SocialIcons"
 import { fadeIn, fadeInDown, fadeInUp, rotateInDown } from "../../Functions/GlobalAnimations"
 import SideButtons from "../../Components/SideButtons";
 import { resetForm, sendEmail } from '../../Functions/Utilities'
+import ERALogo from "../../Assets/img/era-logo-transparent.png"
 
 // Data
 const SocialIconsData = [
@@ -61,13 +62,13 @@ const ComingSoonPage = () => {
                   height="36" width="111"
                   alt="logo"
                   loading="lazy"
-                  src="https://dev.erasolutions.us/static/media/era-logo-transparent.45baf6ed0917eac2e841.png"
+                  src={ERALogo}
                   className="w-[142px] xs:w-[100px] inline-block"
                 />
               </Link>
             </Col>
             <Col xs={12} className="text-center">
-              <m.h1 {...{ ...fadeInDown, transition: { delay: 1, ease: "easeOut", duration: 0.5 } }} className="inline-block font-serif text-gradient bg-gradient-to-r from-[#b783ff] to-[#ff85a6] font-semibold pb-[10px] xl:text-[50px] xl:leading-none xs:text-[38px]">We are <br />launching soon</m.h1>
+              <m.h1 {...{ ...fadeInDown, transition: { delay: 1, ease: "easeOut", duration: 0.5 } }} className="inline-block font-serif text-gradient bg-gradient-to-r from-[#b783ff] to-[#ff85a6] font-semibold pb-[10px] xl:text-[50px] xl:leading-none xs:text-[38px]">This page is nearly <br />ready for launch!</m.h1>
               <m.p {...{ ...fadeInDown, transition: { delay: 1.7, ease: "easeOut", duration: 0.5 } }} className="text-xmd w-2/5 mx-auto mb-[30px] xl:text-xs xs:w-[90%]">We're currently working hard on this page. Subscribe our newsletter to get update when it'll be live.</m.p>
             </Col>
             <Col xs={5}>
